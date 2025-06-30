@@ -29,10 +29,12 @@ public class LandingPage extends AbstractComponents{
 		driver.get("https://psslai-sit.traxionpay.com/");
 	}
 
-	public void login(String username, String password) {
+	public DashBoardPage login(String username, String password) {
 		usernameField.sendKeys(username);
 		passwordField.sendKeys(password);
 		submit.click();
+		DashBoardPage dashboardPage = new DashBoardPage(driver);
+		return dashboardPage;
 	}
 
 }
