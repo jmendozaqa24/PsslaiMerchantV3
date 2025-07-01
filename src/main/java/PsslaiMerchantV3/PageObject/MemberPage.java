@@ -17,10 +17,11 @@ public class MemberPage extends AbstractComponents{
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(css=".page-title")WebElement memberPageTitle;
+	@FindBy(css=".page-header")WebElement memberPageTitle;
 	
 	
 	public String verifyMemberPageTitle() {
+		waitForElementToAppear(memberPageTitle);
 		String memberTitle = memberPageTitle.getText();
 		return memberTitle;
 	}
