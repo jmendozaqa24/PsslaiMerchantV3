@@ -18,6 +18,8 @@ public class MemberPage extends AbstractComponents{
 	}
 	
 	@FindBy(css=".page-header")WebElement memberPageTitle;
+	@FindBy(id= "download-list-btn") WebElement memberDownload;
+	@FindBy(css=".toast-body")WebElement successToastMessage;
 	
 	
 	public String verifyMemberPageTitle() {
@@ -25,5 +27,17 @@ public class MemberPage extends AbstractComponents{
 		String memberTitle = memberPageTitle.getText();
 		return memberTitle;
 	}
+	
+	public void downloadMemberList() {
+		waitForElementToAppear(memberDownload);
+		memberDownload.click();
+	}
+	
+	public String getSuccessMsg() {
+		waitForElementToAppear(successToastMessage);
+		return getSuccessMessageText(successToastMessage);
+	}
+	
+	
 
 }

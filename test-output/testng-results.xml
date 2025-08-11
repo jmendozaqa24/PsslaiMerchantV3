@@ -1,39 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-01T13:53:54 SGT" name="Regression Test" finished-at="2025-07-01T13:54:05 SGT" duration-ms="10576">
+  <suite started-at="2025-08-11T11:42:50 SGT" name="Default suite" finished-at="2025-08-11T11:42:56 SGT" duration-ms="6296">
     <groups>
     </groups>
-    <test started-at="2025-07-01T13:53:54 SGT" name="Test" finished-at="2025-07-01T13:54:05 SGT" duration-ms="10576">
-      <class name="PsslaiMerchantV3.Tests.MemberTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:PsslaiMerchantV3.Tests.MemberTest@4f9a2c08]" started-at="2025-07-01T13:53:54 SGT" name="launchApplication" finished-at="2025-07-01T13:53:57 SGT" duration-ms="2670" status="PASS">
+    <test started-at="2025-08-11T11:42:50 SGT" name="Default test" finished-at="2025-08-11T11:42:56 SGT" duration-ms="6296">
+      <class name="PsslaiMerchantV3.Tests.DepositTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@3e27ba32]" started-at="2025-08-11T11:42:50 SGT" name="launchApplication" finished-at="2025-08-11T11:42:53 SGT" duration-ms="3133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="viewMemberList()[pri:0, instance:PsslaiMerchantV3.Tests.MemberTest@4f9a2c08]" started-at="2025-07-01T13:53:57 SGT" name="viewMemberList" finished-at="2025-07-01T13:54:01 SGT" duration-ms="3440" status="PASS">
+        <test-method signature="manualDeposit()[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@3e27ba32]" started-at="2025-08-11T11:42:53 SGT" name="manualDeposit" finished-at="2025-08-11T11:42:56 SGT" duration-ms="2873" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- viewMemberList -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:PsslaiMerchantV3.Tests.MemberTest@4f9a2c08]" started-at="2025-07-01T13:54:01 SGT" name="tearDown" finished-at="2025-07-01T13:54:01 SGT" duration-ms="267" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- PsslaiMerchantV3.Tests.MemberTest -->
-      <class name="PsslaiMerchantV3.Tests.LoginTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:PsslaiMerchantV3.Tests.LoginTest@7ac0e420]" started-at="2025-07-01T13:54:01 SGT" name="launchApplication" finished-at="2025-07-01T13:54:03 SGT" duration-ms="2220" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="loginValidCreds()[pri:0, instance:PsslaiMerchantV3.Tests.LoginTest@7ac0e420]" started-at="2025-07-01T13:54:03 SGT" name="loginValidCreds" finished-at="2025-07-01T13:54:05 SGT" duration-ms="1760" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginValidCreds -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:PsslaiMerchantV3.Tests.LoginTest@7ac0e420]" started-at="2025-07-01T13:54:05 SGT" name="tearDown" finished-at="2025-07-01T13:54:05 SGT" duration-ms="176" status="PASS">
+        </test-method> <!-- manualDeposit -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@3e27ba32]" started-at="2025-08-11T11:42:56 SGT" name="tearDown" finished-at="2025-08-11T11:42:56 SGT" duration-ms="256" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- PsslaiMerchantV3.Tests.LoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Regression Test -->
+      </class> <!-- PsslaiMerchantV3.Tests.DepositTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

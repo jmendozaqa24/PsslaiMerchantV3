@@ -89,6 +89,11 @@ public class AbstractComponents {
 		return settingsPage;
 	}
 	
+	public String getSuccessMessageText(WebElement successToastMsg) {
+		waitForElementToAppear(successToastMsg);
+		return successToastMsg.getText();
+	}
+	
 	
 	
 	

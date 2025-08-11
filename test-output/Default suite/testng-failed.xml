@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="PsslaiMerchantV3.Tests.MemberTest">
+      <class name="PsslaiMerchantV3.Tests.DepositTest">
         <methods>
-          <include name="viewMemberList"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
+          <include name="manualDeposit"/>
         </methods>
-      </class> <!-- PsslaiMerchantV3.Tests.MemberTest -->
+      </class> <!-- PsslaiMerchantV3.Tests.DepositTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
