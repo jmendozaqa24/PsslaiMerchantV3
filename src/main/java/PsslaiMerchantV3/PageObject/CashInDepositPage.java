@@ -21,16 +21,20 @@ public class CashInDepositPage extends AbstractComponents{
 	
 	@FindBy(css=".btn.btn-primary") WebElement makeADepositButton;
 	@FindBy(id="manual_depository_bank") WebElement depositBankAccountdropdown;
-	
-	
+	@FindBy(id="manual_amount") WebElement manualAmount;
+	@FindBy(css=".modal-title") WebElement modalTitle;
+	@FindBy(name="file") WebElement fileUpload;
 	
 	
 	public void manualDeposit() {
 		waitForElementToAppear(makeADepositButton);
 		makeADepositButton.click();
-		waitForElementToAppear(depositBankAccountdropdown);
+		waitForElementToAppear(modalTitle);
+		manualAmount.clear();
+		manualAmount.sendKeys("1000");
 		Select dropdown = new Select(depositBankAccountdropdown);
 		dropdown.selectByValue("BDO_UNIBANK");
+		//fileUpload.click();
 	}
 	
 	
