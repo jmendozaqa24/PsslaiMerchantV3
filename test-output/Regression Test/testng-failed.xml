@@ -8,11 +8,20 @@
     <classes>
       <class name="PsslaiMerchantV3.Tests.MemberTest">
         <methods>
-          <include name="viewMemberList"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
+          <include name="downloadMemberList"/>
         </methods>
       </class> <!-- PsslaiMerchantV3.Tests.MemberTest -->
+      <class name="PsslaiMerchantV3.Tests.DepositTest">
+        <methods>
+          <include name="verifyManualDepositTransaction" invocation-numbers="0"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="onlineDeposit" invocation-numbers="0"/>
+          <include name="manualDeposit"/>
+        </methods>
+      </class> <!-- PsslaiMerchantV3.Tests.DepositTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Regression Test] -->

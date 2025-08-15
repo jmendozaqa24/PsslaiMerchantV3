@@ -1,5 +1,6 @@
 package PsslaiMerchantV3.TestComponents;
 
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -9,9 +10,11 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterMethod;
@@ -76,4 +79,6 @@ public class BaseTest {
 		List<HashMap<String, String>> data = mapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>(){});
 		return data;
 	}
+	
+	
 }

@@ -8,6 +8,7 @@
     <classes>
       <class name="PsslaiMerchantV3.Tests.MemberTest"/>
       <class name="PsslaiMerchantV3.Tests.LoginTest"/>
+      <class name="PsslaiMerchantV3.Tests.DepositTest"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

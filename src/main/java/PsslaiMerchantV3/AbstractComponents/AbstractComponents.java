@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import PsslaiMerchantV3.PageObject.BranchPage;
@@ -34,10 +35,15 @@ public class AbstractComponents {
 	@FindBy(id="transactions-link-side-bar") WebElement transactionMenu;
 	@FindBy(id="settings-link-side-bar") WebElement settingsMenu;
 	
-	
 	public void waitForElementToAppear(WebElement ele) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOf(ele));
+	}
+	
+	public void uploadFile(WebDriver driver, WebElement locator, String fileUpload) {
+	    WebElement element = locator;
+	    element.clear();
+	    element.sendKeys(fileUpload);
 	}
 	
 	public MemberPage goToMemberMenu() {
@@ -92,6 +98,11 @@ public class AbstractComponents {
 	public String getSuccessMessageText(WebElement successToastMsg) {
 		waitForElementToAppear(successToastMsg);
 		return successToastMsg.getText();
+	}
+	
+	public void dropDownSelection(WebElement dropDownElement, String value) {
+		Select dropDown = new Select(dropDownElement);
+		dropDown.selectByValue(value);
 	}
 	
 	
