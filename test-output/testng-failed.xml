@@ -7,7 +7,7 @@
         <methods>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="manualDeposit" invocation-numbers="0"/>
+          <include name="onlineDeposit" invocation-numbers="0"/>
         </methods>
       </class> <!-- PsslaiMerchantV3.Tests.DepositTest -->
     </classes>

@@ -36,7 +36,7 @@ public class AbstractComponents {
 	@FindBy(id="settings-link-side-bar") WebElement settingsMenu;
 	
 	public void waitForElementToAppear(WebElement ele) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOf(ele));
 	}
 	

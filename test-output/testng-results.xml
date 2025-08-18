@@ -1,20 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-15T14:01:01 SGT" name="Default suite" finished-at="2025-08-15T14:01:11 SGT" duration-ms="10271">
+  <suite started-at="2025-08-18T15:46:55 SGT" name="Regression Test" finished-at="2025-08-18T15:47:39 SGT" duration-ms="43891">
     <groups>
       <group name="Regression">
-        <method signature="DepositTest.manualDeposit(java.util.HashMap)[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@7f485fda]" name="manualDeposit" class="PsslaiMerchantV3.Tests.DepositTest"/>
+        <method signature="DepositTest.manualDeposit(java.util.HashMap)[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@1a6c1270]" name="manualDeposit" class="PsslaiMerchantV3.Tests.DepositTest"/>
+        <method signature="DepositTest.onlineDeposit(java.util.HashMap)[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@1a6c1270]" name="onlineDeposit" class="PsslaiMerchantV3.Tests.DepositTest"/>
+        <method signature="DepositTest.verifyManualDepositTransaction(java.util.HashMap)[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@1a6c1270]" name="verifyManualDepositTransaction" class="PsslaiMerchantV3.Tests.DepositTest"/>
+        <method signature="LoginTest.loginValidCreds(java.util.HashMap)[pri:0, instance:PsslaiMerchantV3.Tests.LoginTest@4748a0f9]" name="loginValidCreds" class="PsslaiMerchantV3.Tests.LoginTest"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2025-08-15T14:01:01 SGT" name="Default test" finished-at="2025-08-15T14:01:11 SGT" duration-ms="10271">
-      <class name="PsslaiMerchantV3.Tests.DepositTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@7f485fda]" started-at="2025-08-15T14:01:01 SGT" name="launchApplication" finished-at="2025-08-15T14:01:05 SGT" duration-ms="3873" status="PASS">
+    <test started-at="2025-08-18T15:46:55 SGT" name="Test" finished-at="2025-08-18T15:47:39 SGT" duration-ms="43891">
+      <class name="PsslaiMerchantV3.Tests.MemberTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:PsslaiMerchantV3.Tests.MemberTest@7b94089b]" started-at="2025-08-18T15:46:55 SGT" name="launchApplication" finished-at="2025-08-18T15:46:59 SGT" duration-ms="4038" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="manualDeposit(java.util.HashMap)[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@7f485fda]" started-at="2025-08-15T14:01:05 SGT" name="manualDeposit" data-provider="getData" finished-at="2025-08-15T14:01:10 SGT" duration-ms="5616" status="FAIL">
+        <test-method signature="downloadMemberList()[pri:0, instance:PsslaiMerchantV3.Tests.MemberTest@7b94089b]" started-at="2025-08-18T15:46:59 SGT" name="downloadMemberList" finished-at="2025-08-18T15:47:03 SGT" duration-ms="3950" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- downloadMemberList -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:PsslaiMerchantV3.Tests.MemberTest@7b94089b]" started-at="2025-08-18T15:47:03 SGT" name="tearDown" finished-at="2025-08-18T15:47:03 SGT" duration-ms="255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:PsslaiMerchantV3.Tests.MemberTest@7b94089b]" started-at="2025-08-18T15:47:03 SGT" name="launchApplication" finished-at="2025-08-18T15:47:06 SGT" duration-ms="3313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="viewMemberList()[pri:0, instance:PsslaiMerchantV3.Tests.MemberTest@7b94089b]" started-at="2025-08-18T15:47:06 SGT" name="viewMemberList" finished-at="2025-08-18T15:47:09 SGT" duration-ms="2064" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewMemberList -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:PsslaiMerchantV3.Tests.MemberTest@7b94089b]" started-at="2025-08-18T15:47:09 SGT" name="tearDown" finished-at="2025-08-18T15:47:09 SGT" duration-ms="192" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- PsslaiMerchantV3.Tests.MemberTest -->
+      <class name="PsslaiMerchantV3.Tests.LoginTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:PsslaiMerchantV3.Tests.LoginTest@4748a0f9]" started-at="2025-08-18T15:47:09 SGT" name="launchApplication" finished-at="2025-08-18T15:47:12 SGT" duration-ms="3103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="loginValidCreds(java.util.HashMap)[pri:0, instance:PsslaiMerchantV3.Tests.LoginTest@4748a0f9]" started-at="2025-08-18T15:47:12 SGT" name="loginValidCreds" data-provider="getData" finished-at="2025-08-18T15:47:14 SGT" duration-ms="1952" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{userName=jmendoza+0002@traxiontech.net, userPassword=Traxion123!!}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginValidCreds -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:PsslaiMerchantV3.Tests.LoginTest@4748a0f9]" started-at="2025-08-18T15:47:14 SGT" name="tearDown" finished-at="2025-08-18T15:47:14 SGT" duration-ms="166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- PsslaiMerchantV3.Tests.LoginTest -->
+      <class name="PsslaiMerchantV3.Tests.DepositTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@1a6c1270]" started-at="2025-08-18T15:47:14 SGT" name="launchApplication" finished-at="2025-08-18T15:47:17 SGT" duration-ms="2976" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="manualDeposit(java.util.HashMap)[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@1a6c1270]" started-at="2025-08-18T15:47:17 SGT" name="manualDeposit" data-provider="getData" finished-at="2025-08-18T15:47:22 SGT" duration-ms="5144" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,58 +72,52 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [10DF8FD143DE] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [10DF8FD143DE] but found []
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at PsslaiMerchantV3.Tests.DepositTest.manualDeposit(DepositTest.java:24)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- manualDeposit -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@7f485fda]" started-at="2025-08-15T14:01:10 SGT" name="tearDown" finished-at="2025-08-15T14:01:11 SGT" duration-ms="432" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@1a6c1270]" started-at="2025-08-18T15:47:22 SGT" name="tearDown" finished-at="2025-08-18T15:47:22 SGT" duration-ms="214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@1a6c1270]" started-at="2025-08-18T15:47:22 SGT" name="launchApplication" finished-at="2025-08-18T15:47:26 SGT" duration-ms="3772" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="onlineDeposit(java.util.HashMap)[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@1a6c1270]" started-at="2025-08-18T15:47:26 SGT" name="onlineDeposit" data-provider="getData" finished-at="2025-08-18T15:47:33 SGT" duration-ms="6582" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{userName=psslai-sit@mailinator.com, userPassword=Traxion123!}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onlineDeposit -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@1a6c1270]" started-at="2025-08-18T15:47:33 SGT" name="tearDown" finished-at="2025-08-18T15:47:33 SGT" duration-ms="209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@1a6c1270]" started-at="2025-08-18T15:47:33 SGT" name="launchApplication" finished-at="2025-08-18T15:47:36 SGT" duration-ms="3148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="verifyManualDepositTransaction(java.util.HashMap)[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@1a6c1270]" started-at="2025-08-18T15:47:36 SGT" name="verifyManualDepositTransaction" data-provider="getData" finished-at="2025-08-18T15:47:39 SGT" depends-on-methods="PsslaiMerchantV3.Tests.DepositTest.manualDeposit" duration-ms="2384" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{userName=psslai-sit@mailinator.com, userPassword=Traxion123!}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyManualDepositTransaction -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:PsslaiMerchantV3.Tests.DepositTest@1a6c1270]" started-at="2025-08-18T15:47:39 SGT" name="tearDown" finished-at="2025-08-18T15:47:39 SGT" duration-ms="214" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- PsslaiMerchantV3.Tests.DepositTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Regression Test -->
 </testng-results>

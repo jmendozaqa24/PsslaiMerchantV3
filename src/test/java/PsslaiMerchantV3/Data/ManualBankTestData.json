@@ -1,0 +1,26 @@
+[
+	{
+		"bankAccount": "BANCO DE ORO UNIBANK, INC.",
+		"serviceFee": "10.00"
+	},
+	{
+		"bankAccount": "BANK OF THE PHILIPPINE ISLANDS",
+		"serviceFee": "10.00"
+	},
+	{
+		"bankAccount": "UNIONBANK",
+		"serviceFee": "10.00"	
+	},
+	{
+		"bankAccount": "PHILIPPINE NATIONAL BANK",
+		"serviceFee": "10.00"			
+	},
+	{
+		"bankAccount": "BDO NETWORK BANK",
+		"serviceFee": "10.00"			
+	},
+	{
+		"bankAccount": "LAND BANK OF THE PHILIPPINES",
+		"serviceFee": "10.00"			
+	}
+]

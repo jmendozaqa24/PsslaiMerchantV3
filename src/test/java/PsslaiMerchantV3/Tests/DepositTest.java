@@ -20,8 +20,9 @@ public class DepositTest extends BaseTest {
 		CashInDepositPage deposit = dashboardPage.goToCashInMenu_Deposit();
 		deposit.clickMakeDepositButton();
 		String manualGeneratedRef = deposit.manualDepositFillOut();
-		String refNum = deposit.getTransactionRef();
-		Assert.assertEquals(manualGeneratedRef, refNum);
+		deposit.submitManualForm();
+		String ref = deposit.getTransactionRef();
+		Assert.assertEquals(manualGeneratedRef, ref);
 		
 	}
 
@@ -38,6 +39,9 @@ public class DepositTest extends BaseTest {
 		CashInDepositPage deposit = dashboardPage.goToCashInMenu_Deposit();
 		deposit.clickMakeDepositButton();
 		deposit.onlineDepositFillOut();
+		deposit.submitOnlineForm();
+		deposit.transactBogusBank("a","a");
+		Assert.assertEquals(deposit.getSuccessMessage(), "Payment Successful!");
 	}
 	
 	@DataProvider
