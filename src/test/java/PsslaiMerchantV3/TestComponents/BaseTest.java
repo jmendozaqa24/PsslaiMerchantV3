@@ -20,6 +20,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import com.aventstack.extentreports.Status;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -79,6 +80,23 @@ public class BaseTest {
 		List<HashMap<String, String>> data = mapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>(){});
 		return data;
 	}
+
+	    // Logging helper
+	public void logInfo(String message) {
+        Listener.extentTest.get().info(message);
+    }
+
+    public void logPass(String message) {
+        Listener.extentTest.get().pass(message);
+    }
+
+    public void logFail(String message) {
+        Listener.extentTest.get().fail(message);
+    }
+
+    public void logWarning(String message) {
+        Listener.extentTest.get().log(Status.WARNING, message);
+    }
 	
 	
 }

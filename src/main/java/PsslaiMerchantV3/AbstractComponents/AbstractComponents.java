@@ -100,10 +100,12 @@ public class AbstractComponents {
 		return successToastMsg.getText();
 	}
 	
-	public void dropDownSelection(WebElement dropDownElement, String value) {
+	public void dropDownSelection(WebElement dropDownElement, String bankAccount) {
 		Select dropDown = new Select(dropDownElement);
-		dropDown.selectByValue(value);
+		dropDown.selectByValue(bankAccount);
 	}
+	
+
 	
 	
 	

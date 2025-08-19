@@ -18,7 +18,7 @@ public class ExtentReportNg {
 
 		extent = new ExtentReports();
 		extent.setSystemInfo("Environment", "QA-SIT");
-		extent.setSystemInfo("Tester", "Joshua MFendoza");
+		extent.setSystemInfo("Tester", "Joshua Mendoza");
 		extent.attachReporter(reporter);
 		return extent;
 

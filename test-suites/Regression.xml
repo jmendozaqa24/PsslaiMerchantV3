@@ -6,9 +6,11 @@
   </listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="PsslaiMerchantV3.Tests.MemberTest"/>
       <class name="PsslaiMerchantV3.Tests.LoginTest"/>
-      <class name="PsslaiMerchantV3.Tests.DepositTest"></class>
+      <class name="PsslaiMerchantV3.Tests.MemberTest"/>
+      <class name="PsslaiMerchantV3.Tests.DepositTest"/>
+      <class name="PsslaiMerchantV3.Tests.WithdrawalTest"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

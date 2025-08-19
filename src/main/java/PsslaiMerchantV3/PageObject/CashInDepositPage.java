@@ -52,6 +52,8 @@ public class CashInDepositPage extends AbstractComponents {
 	WebElement successToastMessage;
 	@FindBy(xpath = "//span[@class='form-selectgroup-title strong mb-1'][text()='Online Deposit']")
 	WebElement onlineDepositType;
+	@FindBy(xpath = "//span[@class='form-selectgroup-title strong mb-1'][text()='Manual Deposit']")
+	WebElement manualDepositType;
 
 	@FindBy(id = "online_transaction_fee")
 	WebElement onlineTrxFee;
@@ -70,12 +72,12 @@ public class CashInDepositPage extends AbstractComponents {
 		waitForElementToAppear(modalTitle);
 	}
 
-	public String manualDepositFillOut() {
+	public String manualDepositFillOut(String amount, String bankAccount) {
 
 		manualAmount.clear();
-		manualAmount.sendKeys("1000");
+		manualAmount.sendKeys(amount);
 		manualGeneratedRef = getManualGeneratedRefNum.getAttribute("value");
-		dropDownSelection(manualBankAccountdropdown, "BDO_UNIBANK");
+		dropDownSelection(manualBankAccountdropdown, bankAccount);
 		uploadFile(driver, fileUpload, uploadFILE);
 		return manualGeneratedRef;
 
@@ -103,16 +105,16 @@ public class CashInDepositPage extends AbstractComponents {
 		return refNum;
 	}
 
-	public void onlineDepositFillOut() {
+	public void onlineDepositFillOut(String amountData, String bankAccountData, String paymentMethodData) {
 
 		waitForElementToAppear(onlineDepositType);
 		onlineDepositType.click();
 		onlineAmount.clear();
-		onlineGeneratedRef = getOnlineGeneratedRefNum.getText();
-		onlineAmount.sendKeys("1000.00");
-		dropDownSelection(onlineBankAccountdropdown, "2");
+		onlineGeneratedRef = getOnlineGeneratedRefNum.getAttribute("value");
+		onlineAmount.sendKeys(amountData);
+		dropDownSelection(onlineBankAccountdropdown, bankAccountData);
 		waitForElementToAppear(onlineMethodValue);
-		dropDownSelection(onlineMethod, "36823");
+		dropDownSelection(onlineMethod, paymentMethodData);
 		// String onlineTransactionFee = onlineTrxFee.getText();
 
 	}
@@ -127,7 +129,8 @@ public class CashInDepositPage extends AbstractComponents {
 	WebElement continueButton;
 	@FindBy(id = "ContentPlaceHolder1_transferButton")
 	WebElement payButton;
-	@FindBy(xpath="//p[@class='payment'][text()=\"Payment Successful!\"]") WebElement successMessage;
+	@FindBy(xpath = "//p[@class='payment'][text()=\"Payment Successful!\"]")
+	WebElement successMessage;
 
 	public void transactBogusBank(String username, String userPass) {
 		waitForElementToAppear(dragonPayFrame);
@@ -140,7 +143,7 @@ public class CashInDepositPage extends AbstractComponents {
 		payButton.click();
 
 	}
-	
+
 	public String getSuccessMessage() {
 		waitForElementToAppear(successMessage);
 		return successMessage.getText();

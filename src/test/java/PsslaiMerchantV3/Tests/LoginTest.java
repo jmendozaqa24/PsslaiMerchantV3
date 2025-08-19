@@ -15,8 +15,10 @@ public class LoginTest extends BaseTest{
 
 	@Test(dataProvider = "getData", groups = "Regression")
 	public void loginValidCreds(HashMap<String,String> input) {
+		logInfo("Login to PSSLAI Web");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
 		Assert.assertTrue(dashboardPage.dashboardLogodisplay());
+		logPass("User successfully logged in and navigated to Dashboard");
 	}
 	
 	@DataProvider

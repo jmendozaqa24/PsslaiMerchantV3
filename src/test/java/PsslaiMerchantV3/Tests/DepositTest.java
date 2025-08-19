@@ -14,41 +14,58 @@ import PsslaiMerchantV3.TestComponents.BaseTest;
 
 public class DepositTest extends BaseTest {
 
-	@Test(dataProvider = "getData" , groups = "Regression")
+	@Test(dataProvider = "getData", groups = "Regression")
 	public void manualDeposit(HashMap<String, String> input) {
+		//logInfo("Login to PSSLAI Web");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
+		//logInfo("Navigate to CashIn-Deposit");
 		CashInDepositPage deposit = dashboardPage.goToCashInMenu_Deposit();
+		//logInfo("Click on the Make Deposit Button");
 		deposit.clickMakeDepositButton();
-		String manualGeneratedRef = deposit.manualDepositFillOut();
+		//logInfo("Fill-out the details in Manual Deposit Form");
+		String manualGeneratedRef = deposit.manualDepositFillOut("1000.00", "BDO_UNIBANK");
+		//logInfo("Submit the form");
 		deposit.submitManualForm();
 		String ref = deposit.getTransactionRef();
 		Assert.assertEquals(manualGeneratedRef, ref);
-		
+		//logPass("Manual deposit completed successfully");
+
 	}
 
-	@Test(dataProvider = "getData" , dependsOnMethods = "manualDeposit", groups = "Regression")
+	@Test(dataProvider = "getData", dependsOnMethods = "manualDeposit", groups = "Regression")
 	public void verifyManualDepositTransaction(HashMap<String, String> input) {
+		logInfo("Login to PSSLAI Web");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
+		logInfo("Navigate to CashIn-Deposit");
 		CashInDepositPage deposit = dashboardPage.goToCashInMenu_Deposit();
+		logInfo("Verify transaction");
 		deposit.checkTransactionPending();
+		logPass("Transaction is reflected");
 	}
-	
-	@Test(dataProvider = "getData" , groups = "Regression")
+
+	@Test(dataProvider = "getData", groups = "Regression")
 	public void onlineDeposit(HashMap<String, String> input) {
+		logInfo("Login to PSSLAI Web");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
+		logInfo("Navigate to CashIn-Deposit");
 		CashInDepositPage deposit = dashboardPage.goToCashInMenu_Deposit();
+		logInfo("Click on the Make Deposit Button");
 		deposit.clickMakeDepositButton();
-		deposit.onlineDepositFillOut();
+		logInfo("Fill-out the details in Online Deposit Form");
+		deposit.onlineDepositFillOut("1000.00", "2", "36823");
+		logInfo("Submit the form");
 		deposit.submitOnlineForm();
-		deposit.transactBogusBank("a","a");
+		logInfo("Transact using Test Bank");
+		deposit.transactBogusBank("a", "a");
 		Assert.assertEquals(deposit.getSuccessMessage(), "Payment Successful!");
+		logPass("Online deposit completed successfully");
 	}
-	
+
 	@DataProvider
 	public Object[][] getData() throws IOException {
-		List<HashMap<String, String>> data = getJsonDataToMap(System.getProperty("user.dir")+"\\src\\test\\java\\PsslaiMerchantV3\\Data\\DepositTestData.json");
-		return new Object[][] {{data.get(0)}};
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				System.getProperty("user.dir") + "\\src\\test\\java\\PsslaiMerchantV3\\Data\\DepositTestData.json");
+		return new Object[][] { { data.get(0) } };
 	}
-	
 
 }
