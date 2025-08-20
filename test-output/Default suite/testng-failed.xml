@@ -5,9 +5,10 @@
     <classes>
       <class name="PsslaiMerchantV3.Tests.DepositTest">
         <methods>
+          <include name="verifyManualDepositTransaction" invocation-numbers="0"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="onlineDeposit" invocation-numbers="0"/>
+          <include name="manualDeposit"/>
         </methods>
       </class> <!-- PsslaiMerchantV3.Tests.DepositTest -->
     </classes>

@@ -56,6 +56,10 @@ public class CashOutWithdrawalPage extends AbstractComponents {
 		waitForElementToAppear(modalTitle);
 
 	}
+	
+	public void pisonetTransactionType() {
+		pesonetType.click();
+	}
 
 	public void linkedAccountsToggleOff() {
 		linkedAccountToggle.click();

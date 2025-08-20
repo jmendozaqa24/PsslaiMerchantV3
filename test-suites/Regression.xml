@@ -10,7 +10,7 @@
       <class name="PsslaiMerchantV3.Tests.MemberTest"/>
       <class name="PsslaiMerchantV3.Tests.DepositTest"/>
       <class name="PsslaiMerchantV3.Tests.WithdrawalTest"/>
-      
+      <class name="PsslaiMerchantV3.Tests.DisbursementTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

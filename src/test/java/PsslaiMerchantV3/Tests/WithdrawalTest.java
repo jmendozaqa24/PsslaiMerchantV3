@@ -58,10 +58,47 @@ public class WithdrawalTest extends BaseTest {
 	
 	@Test(dataProvider = "getData", groups = "Regression")
 	public void withdrawalPesonetLinkedAccounts(HashMap<String, String> input) {
+		logInfo("Login to PSSLAI Web");
+		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
+		logInfo("Navigate to CashOut-Withdrawal");
+		CashOutWithdrawalPage withdrawal = dashboardPage.goToCashOutMenu_Withdrawal();
+		logInfo("Click on the Withdraw Funds button");
+		withdrawal.clickWithdrawFundsButton();
+		withdrawal.pisonetTransactionType();
+		logInfo("Verify that the Linked Account toggle is on");
+		Assert.assertTrue(withdrawal.linkedAccountsToggle());
+		logInfo("Fillout the details on Withdrawal Form");
+		withdrawal.withdrawalFundsFillOutLinkedAccounts("26", "1000.00");
+		withdrawal.inputValidation(input.get("userPassword"));
+		logInfo("Submit the form");
+		withdrawal.submitWithdrawFunds();
+		logInfo("Verify Success Toast Message is dislayed");
+		Assert.assertTrue(withdrawal.getSuccessToastMsg());
+		logPass("Withdrawal Fund completed successfully");
 
 	}
 
-	public void withdrawalPesonet() {
+	@Test(dataProvider="getData", groups="Regression")
+	public void withdrawalPesonet(HashMap<String, String> input) {
+		logInfo("Login to PSSLAI Web");
+		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
+		logInfo("Navigate to CashOut-Withdrawal");
+		CashOutWithdrawalPage withdrawal = dashboardPage.goToCashOutMenu_Withdrawal();
+		logInfo("Click on the Withdraw Funds button");
+		withdrawal.clickWithdrawFundsButton();
+		withdrawal.pisonetTransactionType();
+		withdrawal.linkedAccountsToggleOff();
+		logInfo("Verify that the Linked Account toggle is off");
+		Assert.assertFalse(withdrawal.linkedAccountsToggle());
+		logInfo("Fillout the details on Withdrawal Form");
+		withdrawal.withdrawalFundsFillOutNoLinkedAccounts("2061", "QA Test BDO", "003920087172", "1000.00");
+		withdrawal.inputValidation(input.get("userPassword"));
+		logInfo("Submit the form");
+		withdrawal.submitWithdrawFunds();
+		logInfo("Verify Success Toast Message is dislayed");
+		Assert.assertTrue(withdrawal.getSuccessToastMsg());
+		logPass("Withdrawal Fund completed successfully");
+		
 
 	}
 

@@ -17,7 +17,7 @@ public class CashInDepositPage extends AbstractComponents {
 			+ "\\src\\main\\java\\PsslaiMerchantV3\\Resource\\Images\\Grocery-Receipt-Example.jpg";
 	String manualGeneratedRef;
 	String onlineGeneratedRef;
-	String refNum;
+	public static String refNum;
 
 	public CashInDepositPage(WebDriver driver) {
 		super(driver);
@@ -54,12 +54,10 @@ public class CashInDepositPage extends AbstractComponents {
 	WebElement onlineDepositType;
 	@FindBy(xpath = "//span[@class='form-selectgroup-title strong mb-1'][text()='Manual Deposit']")
 	WebElement manualDepositType;
-
 	@FindBy(id = "online_transaction_fee")
 	WebElement onlineTrxFee;
 	@FindBy(id = "manual_transaction_fee")
 	WebElement manualTrxFee;
-
 	@FindBy(id = "manual_transaction_reference_number")
 	WebElement getManualGeneratedRefNum;
 	@FindBy(id = "online_merchant_reference_number")
@@ -163,12 +161,28 @@ public class CashInDepositPage extends AbstractComponents {
 	WebElement statusDropdown;
 	@FindBy(id = "dt-search-0")
 	WebElement searchBar;
+	@FindBy(css = ".dtr-control")
+	WebElement transactionRef;
+	@FindBy(xpath = "//select[@id='list-status-select']/option[@value='0']")
+	WebElement pendingStatus;
 
-	public void checkTransactionPending() {
+	public boolean selectPendingStatus() {
 
 		waitForElementToAppear(statusDropdown);
-		dropDownSelection(statusDropdown, "1");
-		// searchBar.sendKeys(referenceNumbertoVerify());
+		dropDownSelection(statusDropdown, "0");
+		return pendingStatus.isSelected();
+
+	}
+
+	public void searchTransaction() {
+		searchBar.sendKeys(refNum);
+	}
+
+	public String getResult() {
+		waitForElementToAppear(transactionRef);
+		return transactionRef.getText();
+		
+		
 
 	}
 

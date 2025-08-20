@@ -6,13 +6,21 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="PsslaiMerchantV3.Tests.WithdrawalTest">
+      <class name="PsslaiMerchantV3.Tests.LoginTest">
         <methods>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="withdrawalInstapayLinkedAccounts" invocation-numbers="0"/>
+          <include name="loginValidCreds" invocation-numbers="0"/>
         </methods>
-      </class> <!-- PsslaiMerchantV3.Tests.WithdrawalTest -->
+      </class> <!-- PsslaiMerchantV3.Tests.LoginTest -->
+      <class name="PsslaiMerchantV3.Tests.DepositTest">
+        <methods>
+          <include name="verifyManualDepositTransaction" invocation-numbers="0"/>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="manualDeposit"/>
+        </methods>
+      </class> <!-- PsslaiMerchantV3.Tests.DepositTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Regression Test] -->
