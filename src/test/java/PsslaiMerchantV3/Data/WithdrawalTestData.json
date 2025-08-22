@@ -6,7 +6,10 @@
 		"userPassBogus": "a",
 		"amount": "1000.00",
 		"manualbankType": "BDO_UNIBANK",
-		"onlinebankTypeNum": "2",
+		"bankTypeNum": "26",
+		"bankTypeNumNL": "2061",
+		"accountName": "QA Test BDO",
+		"accountNumber": "003920087172",
 		"paymentMethod": "36823"
 	}
-] 
+]

@@ -1,0 +1,7 @@
+[
+	{
+		"userName": "psslai-sit@mailinator.com",
+		"userPassword": "Traxion123!",	
+		"bulkDisbursementFeeDscrptn": "For Interbank Transfers (InstaPay), a PHP 25.00 processing fee will be computed and deducted from the parent wallet based on the amounts set per item inside the file. Wallet Transfers (TraxionPay) processing fee is PHP 15.00."
+	}
+]

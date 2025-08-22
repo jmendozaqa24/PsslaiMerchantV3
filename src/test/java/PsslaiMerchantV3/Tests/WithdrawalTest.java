@@ -14,7 +14,7 @@ import PsslaiMerchantV3.TestComponents.BaseTest;
 
 public class WithdrawalTest extends BaseTest {
 
-	@Test(dataProvider = "getData", groups = "Regression")
+	@Test(dataProvider = "getData", groups = "Regression", description = "Withdraw via Instapay (linked accounts)")
 	public void withdrawalInstapayLinkedAccounts(HashMap<String, String> input) {
 		logInfo("Login to PSSLAI Web");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
@@ -25,7 +25,7 @@ public class WithdrawalTest extends BaseTest {
 		logInfo("Verify that the Linked Account toggle is on");
 		Assert.assertTrue(withdrawal.linkedAccountsToggle());
 		logInfo("Fillout the details on Withdrawal Form");
-		withdrawal.withdrawalFundsFillOutLinkedAccounts("26", "1000.00");
+		withdrawal.withdrawalFundsFillOutLinkedAccounts(input.get("bankTypeNum"), input.get("amount"));
 		withdrawal.inputValidation(input.get("userPassword"));
 		logInfo("Submit the form");
 		withdrawal.submitWithdrawFunds();
@@ -34,8 +34,8 @@ public class WithdrawalTest extends BaseTest {
 		logPass("Withdrawal Fund completed successfully");
 
 	}
-	
-	@Test(dataProvider="getData", groups = "Regression")
+
+	@Test(dataProvider = "getData", groups = "Regression", description = "Perform withdrawal via Instapay")
 	public void withdrawalInstapay(HashMap<String, String> input) {
 		logInfo("Login to PSSLAI Web");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
@@ -47,7 +47,8 @@ public class WithdrawalTest extends BaseTest {
 		logInfo("Verify that the Linked Account toggle is off");
 		Assert.assertFalse(withdrawal.linkedAccountsToggle());
 		logInfo("Fillout the details on Withdrawal Form");
-		withdrawal.withdrawalFundsFillOutNoLinkedAccounts("2061", "QA Test BDO", "003920087172", "1000.00");
+		withdrawal.withdrawalFundsFillOutNoLinkedAccounts(input.get("bankTypeNumNL"), input.get("accountName"),
+				input.get("accountNumber"), input.get("amount"));
 		withdrawal.inputValidation(input.get("userPassword"));
 		logInfo("Submit the form");
 		withdrawal.submitWithdrawFunds();
@@ -55,8 +56,8 @@ public class WithdrawalTest extends BaseTest {
 		Assert.assertTrue(withdrawal.getSuccessToastMsg());
 		logPass("Withdrawal Fund completed successfully");
 	}
-	
-	@Test(dataProvider = "getData", groups = "Regression")
+
+	@Test(dataProvider = "getData", groups = "Regression", description = "Withdraw via pesonet (linked accounts)")
 	public void withdrawalPesonetLinkedAccounts(HashMap<String, String> input) {
 		logInfo("Login to PSSLAI Web");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
@@ -68,7 +69,7 @@ public class WithdrawalTest extends BaseTest {
 		logInfo("Verify that the Linked Account toggle is on");
 		Assert.assertTrue(withdrawal.linkedAccountsToggle());
 		logInfo("Fillout the details on Withdrawal Form");
-		withdrawal.withdrawalFundsFillOutLinkedAccounts("26", "1000.00");
+		withdrawal.withdrawalFundsFillOutLinkedAccounts(input.get("bankTypeNum"), input.get("amount"));
 		withdrawal.inputValidation(input.get("userPassword"));
 		logInfo("Submit the form");
 		withdrawal.submitWithdrawFunds();
@@ -78,7 +79,7 @@ public class WithdrawalTest extends BaseTest {
 
 	}
 
-	@Test(dataProvider="getData", groups="Regression")
+	@Test(dataProvider = "getData", groups = "Regression", description = "Perform withdrawal via Pesonet")
 	public void withdrawalPesonet(HashMap<String, String> input) {
 		logInfo("Login to PSSLAI Web");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
@@ -91,21 +92,21 @@ public class WithdrawalTest extends BaseTest {
 		logInfo("Verify that the Linked Account toggle is off");
 		Assert.assertFalse(withdrawal.linkedAccountsToggle());
 		logInfo("Fillout the details on Withdrawal Form");
-		withdrawal.withdrawalFundsFillOutNoLinkedAccounts("2061", "QA Test BDO", "003920087172", "1000.00");
+		withdrawal.withdrawalFundsFillOutNoLinkedAccounts(input.get("bankTypeNumNL"), input.get("accountName"),
+				input.get("accountNumber"), input.get("amount"));
 		withdrawal.inputValidation(input.get("userPassword"));
 		logInfo("Submit the form");
 		withdrawal.submitWithdrawFunds();
 		logInfo("Verify Success Toast Message is dislayed");
 		Assert.assertTrue(withdrawal.getSuccessToastMsg());
 		logPass("Withdrawal Fund completed successfully");
-		
 
 	}
 
 	@DataProvider
 	public Object[][] getData() throws IOException {
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				System.getProperty("user.dir") + "\\src\\test\\java\\PsslaiMerchantV3\\Data\\DepositTestData.json");
+				System.getProperty("user.dir") + "\\src\\test\\java\\PsslaiMerchantV3\\Data\\WithdrawalTestData.json");
 		return new Object[][] { { data.get(0) } };
 	}
 

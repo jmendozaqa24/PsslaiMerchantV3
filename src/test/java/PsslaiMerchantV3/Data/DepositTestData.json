@@ -1,10 +1,12 @@
 [
 	{
 		"userName": "psslai-sit@mailinator.com",
-		"userPassword": "Traxion123!"	
-	},
-	{
-		"username": "a",
-		"userPass": "a"
+		"userPassword": "Traxion123!",	
+		"usernameBogus": "a",
+		"userPassBogus": "a",
+		"amount": "1000.00",
+		"manualbankType": "BDO_UNIBANK",
+		"onlinebankTypeNum": "2",
+		"paymentMethod": "36823"
 	}
-]
+] 

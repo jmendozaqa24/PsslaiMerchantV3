@@ -15,7 +15,7 @@ import PsslaiMerchantV3.TestComponents.BaseTest;
 
 public class DisbursementTest extends BaseTest {
 
-	@Test(dataProvider="getData", groups = "Regression")
+	@Test(dataProvider="getData", groups = "Regression", description = "Perform Bulkdisbursement Transaction")
 	public void bulkDisbursementTransaction(HashMap<String, String> input) {
 		logInfo("Login to PSSLAI Web");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
@@ -25,8 +25,7 @@ public class DisbursementTest extends BaseTest {
 		disbursement.clickBuldDisbursementButton();
 		logInfo("Verify the bulk disbursement fee description");
 		disbursement.getDisbursementFeeDscrptn();
-		Assert.assertEquals(disbursement.getDisbursementFeeDscrptn(),
-				"For Interbank Transfers (InstaPay), a PHP 25.00 processing fee will be computed and deducted from the parent wallet based on the amounts set per item inside the file. Wallet Transfers (TraxionPay) processing fee is PHP 15.00.");
+		Assert.assertEquals(disbursement.getDisbursementFeeDscrptn(),input.get("bulkDisbursementFeeDscrptn"));
 		logInfo("Fill-out the details on Bulk Disbursement form");
 		disbursement.bulkDisbursementFillOut();
 		disbursement.inputValidation(input.get("userPassword"));
@@ -38,7 +37,7 @@ public class DisbursementTest extends BaseTest {
 	@DataProvider
 	public Object[][] getData() throws IOException {
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				System.getProperty("user.dir") + "\\src\\test\\java\\PsslaiMerchantV3\\Data\\DepositTestData.json");
+				System.getProperty("user.dir") + "\\src\\test\\java\\PsslaiMerchantV3\\Data\\BulkDisbursementTestData.json");
 		return new Object[][] { { data.get(0) } };
 	}
 

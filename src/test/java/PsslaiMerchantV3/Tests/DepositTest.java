@@ -14,7 +14,7 @@ import PsslaiMerchantV3.TestComponents.BaseTest;
 
 public class DepositTest extends BaseTest {
 
-	@Test(dataProvider = "getData", groups = "Regression")
+	@Test(dataProvider = "getData", groups = "Regression", priority = 1, description = "Perform manual deposit transaction")
 	public void manualDeposit(HashMap<String, String> input) {
 		logInfo("Login to PSSLAI Web");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
@@ -23,7 +23,7 @@ public class DepositTest extends BaseTest {
 		logInfo("Click on the Make Deposit Button");
 		deposit.clickMakeDepositButton();
 		logInfo("Fill-out the details in Manual Deposit Form");
-		String manualGeneratedRef = deposit.manualDepositFillOut("1000.00", "BDO_UNIBANK");
+		String manualGeneratedRef = deposit.manualDepositFillOut(input.get("amount"), input.get("manualbankType"));
 		logInfo("Submit the form");
 		deposit.submitManualForm();
 		String ref = deposit.getTransactionRef();
@@ -33,7 +33,7 @@ public class DepositTest extends BaseTest {
 
 	}
 
-	@Test(dataProvider = "getData", dependsOnMethods = "manualDeposit", groups = "Regression")
+	@Test(dataProvider = "getData", dependsOnMethods = "manualDeposit", groups = "Regression", description = "Verify details of manual deposit transaction")
 	public void verifyManualDepositTransaction(HashMap<String, String> input) throws InterruptedException {
 		logInfo("Login to PSSLAI Web");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
@@ -47,8 +47,8 @@ public class DepositTest extends BaseTest {
 		logPass("Transaction is reflected in Pending status");
 	}
 
-	@Test(dataProvider = "getData", groups = "Regression")
-	public void onlineDeposit(HashMap<String, String> input) {
+	@Test(dataProvider = "getData", groups = "Regression", priority = 2, description = "Perform online deposit transaction")
+	public void onlineDeposit(HashMap<String, String> input) throws InterruptedException {
 		logInfo("Login to PSSLAI Web");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
 		logInfo("Navigate to CashIn-Deposit");
@@ -56,28 +56,30 @@ public class DepositTest extends BaseTest {
 		logInfo("Click on the Make Deposit Button");
 		deposit.clickMakeDepositButton();
 		logInfo("Fill-out the details in Online Deposit Form");
-		deposit.onlineDepositFillOut("1000.00", "2", "36823");
+		deposit.onlineDepositFillOut(input.get("amount"), input.get("onlinebankTypeNum"), input.get("paymentMethod"));
 		logInfo("Submit the form");
 		deposit.submitOnlineForm();
 		logInfo("Transact using Test Bank");
-		deposit.transactBogusBank("a", "a");
+		deposit.transactBogusBank(input.get("usernameBogus"), input.get("userPassBogus"));
 		Assert.assertEquals(deposit.getSuccessMessage(), "Payment Successful!");
-		logPass("Online deposit completed successfully");
+		String ref = deposit.onlineBogusTxnRefNum();
+		logPass("Online deposit completed successfully! Reference Number: " + ref);
 	}
-	
-	@Test(dataProvider="getData", dependsOnMethods="onlineDeposit", groups ="Regression")
-	public void verifyOnlineDepositTransaction(HashMap<String, String> input) {
+
+	@Test(dataProvider = "getData", dependsOnMethods = "onlineDeposit", groups = "Regression", description = "Verify details of online deposit transaction")
+	public void verifyOnlineDepositTransaction(HashMap<String, String> input) throws InterruptedException {
 		logInfo("Login to PSSLAI Web");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
 		logInfo("Navigate to CashIn-Deposit");
 		CashInDepositPage deposit = dashboardPage.goToCashInMenu_Deposit();
 		logInfo("Verify transaction");
-		deposit.selectPendingStatus();
-		Assert.assertTrue(deposit.selectPendingStatus());
+		deposit.selectSuccessStatus();
+		deposit.selectOnlineDepositType();
+		Assert.assertTrue(deposit.selectSuccessStatus());
 		deposit.searchTransaction();
 		Assert.assertEquals(deposit.getResult(), CashInDepositPage.refNum);
-		logPass("Transaction is reflected in Pending status");
-		
+		logPass("Transaction is reflected in Success status");
+
 	}
 
 	@DataProvider

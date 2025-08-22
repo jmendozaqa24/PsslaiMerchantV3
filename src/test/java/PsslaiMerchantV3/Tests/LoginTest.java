@@ -13,7 +13,7 @@ import PsslaiMerchantV3.TestComponents.BaseTest;
 
 public class LoginTest extends BaseTest{
 
-	@Test(dataProvider = "getData", groups = "Regression")
+	@Test(dataProvider = "getData", groups = "Regression", description = "Login with valid credentials")
 	public void loginValidCreds(HashMap<String,String> input) {
 		logInfo("Login to PSSLAI Web");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));

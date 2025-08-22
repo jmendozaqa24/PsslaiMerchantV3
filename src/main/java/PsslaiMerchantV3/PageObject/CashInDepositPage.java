@@ -70,12 +70,12 @@ public class CashInDepositPage extends AbstractComponents {
 		waitForElementToAppear(modalTitle);
 	}
 
-	public String manualDepositFillOut(String amount, String bankAccount) {
+	public String manualDepositFillOut(String amount, String bankType) {
 
 		manualAmount.clear();
 		manualAmount.sendKeys(amount);
 		manualGeneratedRef = getManualGeneratedRefNum.getAttribute("value");
-		dropDownSelection(manualBankAccountdropdown, bankAccount);
+		dropDownSelection(manualBankAccountdropdown, bankType);
 		uploadFile(driver, fileUpload, uploadFILE);
 		return manualGeneratedRef;
 
@@ -103,16 +103,16 @@ public class CashInDepositPage extends AbstractComponents {
 		return refNum;
 	}
 
-	public void onlineDepositFillOut(String amountData, String bankAccountData, String paymentMethodData) {
+	public void onlineDepositFillOut(String amountData, String bankTypeNum, String paymentMethod) {
 
 		waitForElementToAppear(onlineDepositType);
 		onlineDepositType.click();
 		onlineAmount.clear();
 		onlineGeneratedRef = getOnlineGeneratedRefNum.getAttribute("value");
 		onlineAmount.sendKeys(amountData);
-		dropDownSelection(onlineBankAccountdropdown, bankAccountData);
+		dropDownSelection(onlineBankAccountdropdown, bankTypeNum);
 		waitForElementToAppear(onlineMethodValue);
-		dropDownSelection(onlineMethod, paymentMethodData);
+		dropDownSelection(onlineMethod, paymentMethod);
 		// String onlineTransactionFee = onlineTrxFee.getText();
 
 	}
@@ -129,6 +129,7 @@ public class CashInDepositPage extends AbstractComponents {
 	WebElement payButton;
 	@FindBy(xpath = "//p[@class='payment'][text()=\"Payment Successful!\"]")
 	WebElement successMessage;
+	@FindBy(xpath = "//p[@class='ref has-text-centered'][2]") WebElement transactRefNum;
 
 	public void transactBogusBank(String username, String userPass) {
 		waitForElementToAppear(dragonPayFrame);
@@ -140,6 +141,22 @@ public class CashInDepositPage extends AbstractComponents {
 		waitForElementToAppear(payButton);
 		payButton.click();
 
+	}
+	
+	public String onlineBogusTxnRefNum() throws InterruptedException {
+		waitForElementToAppear(transactRefNum);
+		Thread.sleep(3000);
+		String getRefNum = transactRefNum.getText();
+		System.out.println("Toast Raw Text: " + getRefNum);
+
+		refNum = "";
+		Matcher matcher = Pattern.compile("TraxionPay Reference Number:\\s+([A-Za-z0-9]+)").matcher(getRefNum);
+		if (matcher.find()) {
+			refNum = matcher.group(1);
+		}
+		// System.out.println("Extracted Ref: " + refNum);
+		return refNum;
+		
 	}
 
 	public String getSuccessMessage() {
@@ -159,12 +176,16 @@ public class CashInDepositPage extends AbstractComponents {
 
 	@FindBy(id = "list-status-select")
 	WebElement statusDropdown;
-	@FindBy(id = "dt-search-0")
+	@FindBy(id = "list-type-select") WebElement depositTypeDropdown;
+	@FindBy(xpath = "//input[@id='dt-search-0']")
 	WebElement searchBar;
 	@FindBy(css = ".dtr-control")
 	WebElement transactionRef;
 	@FindBy(xpath = "//select[@id='list-status-select']/option[@value='0']")
 	WebElement pendingStatus;
+	@FindBy(xpath = "//select[@id='list-status-select']/option[@value='1']")
+	WebElement successStatus;
+	@FindBy(xpath = "//select[@id='list-type-select']/option[@value='online']") WebElement onlineDeposit;
 
 	public boolean selectPendingStatus() {
 
@@ -173,8 +194,25 @@ public class CashInDepositPage extends AbstractComponents {
 		return pendingStatus.isSelected();
 
 	}
+	
+	public boolean selectSuccessStatus() {
 
-	public void searchTransaction() {
+		waitForElementToAppear(statusDropdown);
+		dropDownSelection(statusDropdown, "1");
+		return successStatus.isSelected();
+
+	}
+	
+	public boolean selectOnlineDepositType() {
+		waitForElementToAppear(depositTypeDropdown);
+		dropDownSelection(depositTypeDropdown, "online");
+		return onlineDeposit.isSelected();
+	}
+
+
+	public void searchTransaction() throws InterruptedException {
+		Thread.sleep(2000);
+		waitForElementToAppear(searchBar);
 		searchBar.sendKeys(refNum);
 	}
 

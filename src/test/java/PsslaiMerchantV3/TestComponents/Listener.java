@@ -17,7 +17,7 @@ public class Listener extends BaseTest implements ITestListener {
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		ExtentTest test = extent.createTest(result.getMethod().getMethodName());
+		ExtentTest test = extent.createTest(result.getMethod().getDescription());
 		extentTest.set(test); // ✅ store per-thread test object
 	}
 
@@ -38,6 +38,12 @@ public class Listener extends BaseTest implements ITestListener {
 		}
 	}
 
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		extentTest.get().skip("Test Skipped: " + result.getThrowable());
+		
+	}
+	
 	@Override
 	public void onFinish(ITestContext context) {
 		extent.flush();
