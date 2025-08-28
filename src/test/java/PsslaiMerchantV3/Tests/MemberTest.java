@@ -12,13 +12,14 @@ import PsslaiMerchantV3.PageObject.DashBoardPage;
 import PsslaiMerchantV3.PageObject.MemberPage;
 import PsslaiMerchantV3.TestComponents.BaseTest;
 
+
 public class MemberTest extends BaseTest {
+	
 
 	@Test(dataProvider="getData", groups = "Regression", description = "View member list in UI")
 	public void viewMemberList(HashMap<String, String> input) {
 		logInfo("Login to PSSLAI Web");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
-		logInfo("Navigate to Member Menu");
 		MemberPage memberPage = dashboardPage.goToMemberMenu();
 		Assert.assertEquals("Members", memberPage.verifyMemberPageTitle());
 		logPass("User successfully navigated to Member Menu");

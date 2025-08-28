@@ -22,6 +22,7 @@ public class DashBoardPage extends AbstractComponents {
 	
 	
 	public boolean dashboardLogodisplay() {
+		
 		waitForElementToAppear(PsslaiLogo);
 		return PsslaiLogo.isDisplayed();
 	}

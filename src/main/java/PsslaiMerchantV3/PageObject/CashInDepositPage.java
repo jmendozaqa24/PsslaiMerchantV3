@@ -62,61 +62,6 @@ public class CashInDepositPage extends AbstractComponents {
 	WebElement getManualGeneratedRefNum;
 	@FindBy(id = "online_merchant_reference_number")
 	WebElement getOnlineGeneratedRefNum;
-
-	public void clickMakeDepositButton() {
-
-		waitForElementToAppear(makeADepositButton);
-		makeADepositButton.click();
-		waitForElementToAppear(modalTitle);
-	}
-
-	public String manualDepositFillOut(String amount, String bankType) {
-
-		manualAmount.clear();
-		manualAmount.sendKeys(amount);
-		manualGeneratedRef = getManualGeneratedRefNum.getAttribute("value");
-		dropDownSelection(manualBankAccountdropdown, bankType);
-		uploadFile(driver, fileUpload, uploadFILE);
-		return manualGeneratedRef;
-
-	}
-
-	public void submitManualForm() {
-		submitManualDeposit.click();
-	}
-
-	public void submitOnlineForm() {
-		submitOnlineDeposit.click();
-	}
-
-	public String getTransactionRef() {
-		waitForElementToAppear(successToastMessage);
-		String getRefNum = successToastMessage.getText();
-		// System.out.println("Toast Raw Text: " + getRefNum);
-
-		refNum = "";
-		Matcher matcher = Pattern.compile("Reference Number\\s+([A-Za-z0-9]+)").matcher(getRefNum);
-		if (matcher.find()) {
-			refNum = matcher.group(1);
-		}
-		// System.out.println("Extracted Ref: " + refNum);
-		return refNum;
-	}
-
-	public void onlineDepositFillOut(String amountData, String bankTypeNum, String paymentMethod) {
-
-		waitForElementToAppear(onlineDepositType);
-		onlineDepositType.click();
-		onlineAmount.clear();
-		onlineGeneratedRef = getOnlineGeneratedRefNum.getAttribute("value");
-		onlineAmount.sendKeys(amountData);
-		dropDownSelection(onlineBankAccountdropdown, bankTypeNum);
-		waitForElementToAppear(onlineMethodValue);
-		dropDownSelection(onlineMethod, paymentMethod);
-		// String onlineTransactionFee = onlineTrxFee.getText();
-
-	}
-
 	@FindBy(xpath = "//iframe[@title='Response']")
 	WebElement dragonPayFrame;
 	@FindBy(id = "ContentPlaceHolder1_userIdTextBox")
@@ -130,7 +75,94 @@ public class CashInDepositPage extends AbstractComponents {
 	@FindBy(xpath = "//p[@class='payment'][text()=\"Payment Successful!\"]")
 	WebElement successMessage;
 	@FindBy(xpath = "//p[@class='ref has-text-centered'][2]") WebElement transactRefNum;
+	@FindBy(id = "list-status-select")
+	WebElement statusDropdown;
+	@FindBy(id = "list-type-select") WebElement depositTypeDropdown;
+	@FindBy(xpath = "//input[@id='dt-search-0']")
+	WebElement searchBar;
+	@FindBy(css = ".dtr-control")
+	WebElement transactionRef;
+	@FindBy(xpath = "//select[@id='list-status-select']/option[@value='0']")
+	WebElement pendingStatus;
+	@FindBy(xpath = "//select[@id='list-status-select']/option[@value='1']")
+	WebElement successStatus;
+	@FindBy(xpath = "//select[@id='list-type-select']/option[@value='online']") WebElement onlineDeposit;
 
+
+	//Manual Deposit
+	
+	public void clickMakeDepositButton() {
+
+		waitForElementToAppear(makeADepositButton);
+		makeADepositButton.click();
+		waitForElementToAppear(modalTitle);
+	}
+
+	public void manualDepositFillOut(String amount, String bankType) {
+
+		manualAmount.clear();
+		manualAmount.sendKeys(amount);
+		manualGeneratedRef = getManualGeneratedRefNum.getAttribute("value");
+		dropDownSelection(manualBankAccountdropdown, bankType);
+		uploadFile(driver, fileUpload, uploadFILE);
+
+	}
+
+	public void submitManualForm() {
+		submitManualDeposit.click();
+	}
+	
+	public String getTransactionRef() {
+		waitForElementToAppear(successToastMessage);
+		String getRefNum = successToastMessage.getText();
+		System.out.println("Toast Raw Text: " + getRefNum);
+
+		
+		Matcher matcher = Pattern.compile("Reference Number\\s+([A-Za-z0-9]+)").matcher(getRefNum);
+		if (matcher.find()) {
+			refNum = matcher.group(1);
+		}
+		// System.out.println("Extracted Ref: " + refNum);
+		return refNum;
+	}
+	
+	public String performManualDeposit(String amount, String bankType) {
+		clickMakeDepositButton();
+		manualDepositFillOut(amount, bankType);
+		submitManualForm();
+		return getTransactionRef();
+	}
+	
+	
+	
+	// Verify Manual Deposit Transaction
+	
+	public void performSearchManualTransaction() throws InterruptedException {
+		selectPendingStatus();
+		searchTransaction();
+	}
+
+	
+	// Online Deposit
+	
+	public void onlineDepositFillOut(String amountData, String bankTypeNum, String paymentMethod) {
+
+		waitForElementToAppear(onlineDepositType);
+		onlineDepositType.click();
+		onlineAmount.clear();
+		onlineGeneratedRef = getOnlineGeneratedRefNum.getAttribute("value");
+		onlineAmount.sendKeys(amountData);
+		dropDownSelection(onlineBankAccountdropdown, bankTypeNum);
+		waitForElementToAppear(onlineMethodValue);
+		dropDownSelection(onlineMethod, paymentMethod);
+		// String onlineTransactionFee = onlineTrxFee.getText();
+
+	}
+	
+	public void submitOnlineForm() {
+		submitOnlineDeposit.click();
+	}
+	
 	public void transactBogusBank(String username, String userPass) {
 		waitForElementToAppear(dragonPayFrame);
 		driver.switchTo().frame(dragonPayFrame);
@@ -143,13 +175,27 @@ public class CashInDepositPage extends AbstractComponents {
 
 	}
 	
+	public String performOnlineDeposit(String amountData, String bankTypeNum, String paymentMethod, String username, String userPass) throws InterruptedException {
+		clickMakeDepositButton();
+		onlineDepositFillOut(amountData, bankTypeNum, paymentMethod);
+		submitOnlineForm();
+		transactBogusBank(username, userPass);
+		return onlineBogusTxnRefNum();
+	}
+	
+	public void performSearchOnlineTransaction() throws InterruptedException {
+		selectSuccessStatus();
+		selectOnlineDepositType();
+		searchTransaction();
+	}
+
+	
 	public String onlineBogusTxnRefNum() throws InterruptedException {
 		waitForElementToAppear(transactRefNum);
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		String getRefNum = transactRefNum.getText();
 		System.out.println("Toast Raw Text: " + getRefNum);
 
-		refNum = "";
 		Matcher matcher = Pattern.compile("TraxionPay Reference Number:\\s+([A-Za-z0-9]+)").matcher(getRefNum);
 		if (matcher.find()) {
 			refNum = matcher.group(1);
@@ -174,18 +220,7 @@ public class CashInDepositPage extends AbstractComponents {
 		return manualGeneratedRef;
 	}
 
-	@FindBy(id = "list-status-select")
-	WebElement statusDropdown;
-	@FindBy(id = "list-type-select") WebElement depositTypeDropdown;
-	@FindBy(xpath = "//input[@id='dt-search-0']")
-	WebElement searchBar;
-	@FindBy(css = ".dtr-control")
-	WebElement transactionRef;
-	@FindBy(xpath = "//select[@id='list-status-select']/option[@value='0']")
-	WebElement pendingStatus;
-	@FindBy(xpath = "//select[@id='list-status-select']/option[@value='1']")
-	WebElement successStatus;
-	@FindBy(xpath = "//select[@id='list-type-select']/option[@value='online']") WebElement onlineDeposit;
+	
 
 	public boolean selectPendingStatus() {
 

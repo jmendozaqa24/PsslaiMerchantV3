@@ -80,23 +80,24 @@ public class BaseTest {
 		List<HashMap<String, String>> data = mapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>(){});
 		return data;
 	}
-
-	    // Logging helper
-	public void logInfo(String message) {
-        Listener.extentTest.get().info(message);
-    }
-
-    public void logPass(String message) {
-        Listener.extentTest.get().pass(message);
-    }
-
-    public void logFail(String message) {
-        Listener.extentTest.get().fail(message);
-    }
-
-    public void logWarning(String message) {
-        Listener.extentTest.get().log(Status.WARNING, message);
-    }
 	
+	  // Logging helper
+		public static void logInfo(String message) {
+	        Listener.extentTest.get().info(message);
+	    }
+
+	    public static void logPass(String message) {
+	        Listener.extentTest.get().pass(message);
+	    }
+
+	    public static void logFail(String message) {
+	        Listener.extentTest.get().fail(message);
+	    }
+
+	    public static void logWarning(String message) {
+	        Listener.extentTest.get().log(Status.WARNING, message);
+	    }
+		
+
 	
 }

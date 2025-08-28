@@ -11,19 +11,20 @@ import org.testng.annotations.Test;
 import PsslaiMerchantV3.PageObject.DashBoardPage;
 import PsslaiMerchantV3.TestComponents.BaseTest;
 
-public class LoginTest extends BaseTest{
+public class LoginTest extends BaseTest {
 
 	@Test(dataProvider = "getData", groups = "Regression", description = "Login with valid credentials")
-	public void loginValidCreds(HashMap<String,String> input) {
-		logInfo("Login to PSSLAI Web");
+	public void loginValidCreds(HashMap<String, String> input) {
+		logInfo("Starting login with valid credentials");
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
-		Assert.assertTrue(dashboardPage.dashboardLogodisplay());
+		Assert.assertTrue(dashboardPage.dashboardLogodisplay(), "The screen should be navigated to dashboard");
 		logPass("User successfully logged in and navigated to Dashboard");
 	}
-	
+
 	@DataProvider
 	public Object[][] getData() throws IOException {
-		List<HashMap<String, String>> data = getJsonDataToMap(System.getProperty("user.dir")+"\\src\\test\\java\\PsslaiMerchantV3\\Data\\logincreds.json");
-		return new Object[][] {{data.get(0)}};
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				System.getProperty("user.dir") + "\\src\\test\\java\\PsslaiMerchantV3\\Data\\logincreds.json");
+		return new Object[][] { { data.get(0) } };
 	}
 }

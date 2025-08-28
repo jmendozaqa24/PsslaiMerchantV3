@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -20,15 +21,8 @@ public class DepositTest extends BaseTest {
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
 		logInfo("Navigate to CashIn-Deposit");
 		CashInDepositPage deposit = dashboardPage.goToCashInMenu_Deposit();
-		logInfo("Click on the Make Deposit Button");
-		deposit.clickMakeDepositButton();
-		logInfo("Fill-out the details in Manual Deposit Form");
-		String manualGeneratedRef = deposit.manualDepositFillOut(input.get("amount"), input.get("manualbankType"));
-		logInfo("Submit the form");
-		deposit.submitManualForm();
-		String ref = deposit.getTransactionRef();
-		Assert.assertEquals(manualGeneratedRef, ref);
-		System.out.println("Transaction Ref: " + ref);
+		logInfo("Starting to perform manual deposit");
+		String ref = deposit.performManualDeposit(input.get("amount"), input.get("manualbankType"));
 		logPass("Manual deposit completed successfully! Transaction Ref: " + ref);
 
 	}
@@ -40,9 +34,7 @@ public class DepositTest extends BaseTest {
 		logInfo("Navigate to CashIn-Deposit");
 		CashInDepositPage deposit = dashboardPage.goToCashInMenu_Deposit();
 		logInfo("Verify transaction");
-		deposit.selectPendingStatus();
-		Assert.assertTrue(deposit.selectPendingStatus());
-		deposit.searchTransaction();
+		deposit.performSearchManualTransaction();
 		Assert.assertEquals(deposit.getResult(), CashInDepositPage.refNum);
 		logPass("Transaction is reflected in Pending status");
 	}
@@ -53,16 +45,15 @@ public class DepositTest extends BaseTest {
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
 		logInfo("Navigate to CashIn-Deposit");
 		CashInDepositPage deposit = dashboardPage.goToCashInMenu_Deposit();
-		logInfo("Click on the Make Deposit Button");
-		deposit.clickMakeDepositButton();
-		logInfo("Fill-out the details in Online Deposit Form");
-		deposit.onlineDepositFillOut(input.get("amount"), input.get("onlinebankTypeNum"), input.get("paymentMethod"));
-		logInfo("Submit the form");
-		deposit.submitOnlineForm();
-		logInfo("Transact using Test Bank");
-		deposit.transactBogusBank(input.get("usernameBogus"), input.get("userPassBogus"));
-		Assert.assertEquals(deposit.getSuccessMessage(), "Payment Successful!");
-		String ref = deposit.onlineBogusTxnRefNum();
+		String ref = deposit.performOnlineDeposit(
+				input.get("amount"), 
+				input.get("onlinebankTypeNum"), 
+				input.get("paymentMethod"), 
+				
+				//Login to Bogus Bank
+				input.get("usernameBogus"), 
+				input.get("userPassBogus"));
+		Assert.assertEquals(deposit.getSuccessMessage(), "Payment Successful!", "Payment Successful! should be displayed");
 		logPass("Online deposit completed successfully! Reference Number: " + ref);
 	}
 
@@ -72,12 +63,9 @@ public class DepositTest extends BaseTest {
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
 		logInfo("Navigate to CashIn-Deposit");
 		CashInDepositPage deposit = dashboardPage.goToCashInMenu_Deposit();
-		logInfo("Verify transaction");
-		deposit.selectSuccessStatus();
-		deposit.selectOnlineDepositType();
-		Assert.assertTrue(deposit.selectSuccessStatus());
-		deposit.searchTransaction();
-		Assert.assertEquals(deposit.getResult(), CashInDepositPage.refNum);
+		logInfo("Starting to perform verify online transaction");
+		deposit.performSearchOnlineTransaction();
+		Assert.assertEquals(deposit.getResult(), CashInDepositPage.refNum, "Reference Number should be displayed");
 		logPass("Transaction is reflected in Success status");
 
 	}
