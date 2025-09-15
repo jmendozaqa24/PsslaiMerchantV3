@@ -37,6 +37,31 @@ public class MemberTest extends BaseTest {
 		logPass("Downloaded Successfully");
 	}
 	
+	@Test(dataProvider = "getData", groups = "Regression", description="Search Member from Member List")
+	public void searchMember(HashMap<String, String> input) {
+		logInfo("Login to PSSLAI Web");
+		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
+		logInfo("Navigate to Member Menu");
+		MemberPage memberPage = dashboardPage.goToMemberMenu();
+		logInfo("Perform Member Search");
+		String resultMember = memberPage.getSearchResultMember(input.get("firstName"));
+		Assert.assertEquals(input.get("fullName"), resultMember, "Name does not match");
+		logPass("Successfully searched a member");
+	}
+	
+	@Test(dataProvider = "getData", groups = "Regression", description="View member details")
+	public void viewMemberDetails(HashMap<String, String> input) {
+		logInfo("Login to PSSLAI Web");
+		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
+		logInfo("Navigate to Member Menu");
+		MemberPage memberPage = dashboardPage.goToMemberMenu();
+		logInfo("Click Member View Details");
+		String pageTitle = memberPage.clickUser(input.get("firstName"));
+		Assert.assertEquals("Member Details", pageTitle, "Page title doesn't match");
+		logPass("Member View Details is successfully displayed");
+	}
+	
+	
 	@DataProvider
 	public Object[][] getData() throws IOException {
 		List<HashMap<String, String>> data = getJsonDataToMap(

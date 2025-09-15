@@ -11,7 +11,7 @@
 <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
-<style type="text/css"></style></head><body class="spa -report dark">
+<style type="text/css"></style></head><body class="spa -report standard">
   <div class="app">
     <div class="layout">
 <div class="header navbar">
@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">PSSLAI Merchant Webtool</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Aug 28, 2025 02:58:41 PM</span></a>
+<a href="#"><span class="badge badge-primary">Sep 15, 2025 03:33:44 PM</span></a>
 </li>
 </ul>
 </div>
@@ -80,25 +80,25 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Login with valid credentials</p>
             <p class="text-sm">
-              <span>2:58:45 PM</span> / <span>00:00:12:418</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>3:33:56 PM</span> / <span>00:00:00:143</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Login with valid credentials</h5>
-<span class='badge badge-success'>08.28.2025 2:58:45 PM</span>
-<span class='badge badge-danger'>08.28.2025 2:58:57 PM</span>
-<span class='badge badge-default'>00:00:12:418</span>
+<h5 class="test-status text-fail">Login with valid credentials</h5>
+<span class='badge badge-success'>09.15.2025 3:33:56 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:33:57 PM</span>
+<span class='badge badge-default'>00:00:00:143</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -111,16 +111,90 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>2:58:45 PM</td>
+        <td>3:33:56 PM</td>
         <td>
           Starting login with valid credentials
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>2:58:57 PM</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:33:56 PM</td>
         <td>
-          User successfully logged in and navigated to Dashboard
+          <textarea readonly class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#identity"}
+  (Session info: chrome=140.0.7339.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [82149316c90d37ae3f973de25df5a006, findElement {value=identity, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\jmendoza\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63191}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63191/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 82149316c90d37ae3f973de25df5a006
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
+	at PsslaiMerchantV3.PageObject.LandingPage.login(LandingPage.java:35)
+	at PsslaiMerchantV3.Tests.LoginTest.loginValidCreds(LoginTest.java:19)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:33:57 PM</td>
+        <td>
+          Screenshot of failure
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\jmendoza\eclipse-workspace\PsslaiMerchantV3//Reports//ScreenShot//loginValidCreds.png' src="C:\Users\jmendoza\eclipse-workspace\PsslaiMerchantV3//Reports//ScreenShot//loginValidCreds.png">
+  
+    
+
+    </div></div>
         </td>
       </tr>
   </tbody>
@@ -133,9 +207,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Download member list successfully</p>
+            <p class="name">Login with invalid credencials</p>
             <p class="text-sm">
-              <span>2:58:59 PM</span> / <span>00:00:03:564</span>
+              <span>3:34:04 PM</span> / <span>00:00:00:404</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -143,10 +217,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Download member list successfully</h5>
-<span class='badge badge-success'>08.28.2025 2:58:59 PM</span>
-<span class='badge badge-danger'>08.28.2025 2:59:02 PM</span>
-<span class='badge badge-default'>00:00:03:564</span>
+<h5 class="test-status text-pass">Login with invalid credencials</h5>
+<span class='badge badge-success'>09.15.2025 3:34:04 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:34:04 PM</span>
+<span class='badge badge-default'>00:00:00:404</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -159,30 +233,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>2:58:59 PM</td>
+        <td>3:34:04 PM</td>
         <td>
-          Login to PSSLAI Web
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>2:58:59 PM</td>
-        <td>
-          Navigate to Member Menu
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>2:59:00 PM</td>
-        <td>
-          Download List of Members
+          Starting login with invalid credentials
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>2:59:02 PM</td>
+        <td>3:34:04 PM</td>
         <td>
-          Downloaded Successfully
+          Error Message successfully displayed
         </td>
       </tr>
   </tbody>
@@ -195,9 +255,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">View member list in UI</p>
+            <p class="name">Login with incorrect password</p>
             <p class="text-sm">
-              <span>2:59:05 PM</span> / <span>00:00:05:684</span>
+              <span>3:34:11 PM</span> / <span>00:00:00:480</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -205,10 +265,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">View member list in UI</h5>
-<span class='badge badge-success'>08.28.2025 2:59:05 PM</span>
-<span class='badge badge-danger'>08.28.2025 2:59:10 PM</span>
-<span class='badge badge-default'>00:00:05:684</span>
+<h5 class="test-status text-pass">Login with incorrect password</h5>
+<span class='badge badge-success'>09.15.2025 3:34:11 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:34:12 PM</span>
+<span class='badge badge-default'>00:00:00:480</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -221,16 +281,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>2:59:05 PM</td>
+        <td>3:34:11 PM</td>
         <td>
-          Login to PSSLAI Web
+          Starting login with invalid password
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>2:59:10 PM</td>
+        <td>3:34:12 PM</td>
         <td>
-          User successfully navigated to Member Menu
+          Error Message successfully displayed
         </td>
       </tr>
   </tbody>
@@ -243,9 +303,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Perform manual deposit transaction</p>
+            <p class="name">Login without credencials</p>
             <p class="text-sm">
-              <span>2:59:13 PM</span> / <span>00:00:04:869</span>
+              <span>3:34:20 PM</span> / <span>00:00:00:303</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -253,10 +313,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Perform manual deposit transaction</h5>
-<span class='badge badge-success'>08.28.2025 2:59:13 PM</span>
-<span class='badge badge-danger'>08.28.2025 2:59:18 PM</span>
-<span class='badge badge-default'>00:00:04:869</span>
+<h5 class="test-status text-pass">Login without credencials</h5>
+<span class='badge badge-success'>09.15.2025 3:34:20 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:34:20 PM</span>
+<span class='badge badge-default'>00:00:00:303</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -269,30 +329,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>2:59:13 PM</td>
+        <td>3:34:20 PM</td>
         <td>
-          Login to PSSLAI Web
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>2:59:15 PM</td>
-        <td>
-          Navigate to CashIn-Deposit
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>2:59:15 PM</td>
-        <td>
-          Starting to perform manual deposit
+          Starting login without credencials
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>2:59:18 PM</td>
+        <td>3:34:20 PM</td>
         <td>
-          Manual deposit completed successfully! Transaction Ref: 10E22F60B3A0
+          Error Message successfully displayed
         </td>
       </tr>
   </tbody>
@@ -300,14 +346,361 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="5"
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Download member list successfully</p>
+            <p class="text-sm">
+              <span>3:34:28 PM</span> / <span>00:00:05:278</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Download member list successfully</h5>
+<span class='badge badge-success'>09.15.2025 3:34:28 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:34:33 PM</span>
+<span class='badge badge-default'>00:00:05:278</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:28 PM</td>
+        <td>
+          Login to PSSLAI Web
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:32 PM</td>
+        <td>
+          Navigate to Member Menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:32 PM</td>
+        <td>
+          Download List of Members
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:34:33 PM</td>
+        <td>
+          Downloaded Successfully
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Search Member from Member List</p>
+            <p class="text-sm">
+              <span>3:34:41 PM</span> / <span>00:00:02:766</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Search Member from Member List</h5>
+<span class='badge badge-success'>09.15.2025 3:34:41 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:34:44 PM</span>
+<span class='badge badge-default'>00:00:02:766</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:41 PM</td>
+        <td>
+          Login to PSSLAI Web
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:42 PM</td>
+        <td>
+          Navigate to Member Menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:43 PM</td>
+        <td>
+          Perform Member Search
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:34:44 PM</td>
+        <td>
+          <textarea readonly class="code-block">java.lang.AssertionError: Name does not match expected [James Jomel] but found [Kevin Edward Gile Pasimio]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at PsslaiMerchantV3.Tests.MemberTest.searchMember(MemberTest.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:34:44 PM</td>
+        <td>
+          Screenshot of failure
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\jmendoza\eclipse-workspace\PsslaiMerchantV3//Reports//ScreenShot//searchMember.png' src="C:\Users\jmendoza\eclipse-workspace\PsslaiMerchantV3//Reports//ScreenShot//searchMember.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">View member details</p>
+            <p class="text-sm">
+              <span>3:34:51 PM</span> / <span>00:00:03:158</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">View member details</h5>
+<span class='badge badge-success'>09.15.2025 3:34:51 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:34:54 PM</span>
+<span class='badge badge-default'>00:00:03:158</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:51 PM</td>
+        <td>
+          Login to PSSLAI Web
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:53 PM</td>
+        <td>
+          Navigate to Member Menu
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:34:53 PM</td>
+        <td>
+          Click Member View Details
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:34:54 PM</td>
+        <td>
+          Member View Details is successfully displayed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">View member list in UI</p>
+            <p class="text-sm">
+              <span>3:35:01 PM</span> / <span>00:00:02:226</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">View member list in UI</h5>
+<span class='badge badge-success'>09.15.2025 3:35:01 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:35:03 PM</span>
+<span class='badge badge-default'>00:00:02:226</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:01 PM</td>
+        <td>
+          Login to PSSLAI Web
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:35:03 PM</td>
+        <td>
+          User successfully navigated to Member Menu
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Perform manual deposit transaction</p>
+            <p class="text-sm">
+              <span>3:35:10 PM</span> / <span>00:00:06:956</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Perform manual deposit transaction</h5>
+<span class='badge badge-success'>09.15.2025 3:35:10 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:35:17 PM</span>
+<span class='badge badge-default'>00:00:06:956</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:10 PM</td>
+        <td>
+          Login to PSSLAI Web
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:11 PM</td>
+        <td>
+          Navigate to CashIn-Deposit
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:12 PM</td>
+        <td>
+          Starting to perform manual deposit
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:35:17 PM</td>
+        <td>
+          Manual deposit completed successfully! Transaction Ref: 10E5CFA312C8
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="10"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Verify details of manual deposit transaction</p>
             <p class="text-sm">
-              <span>2:59:22 PM</span> / <span>00:00:15:562</span>
+              <span>3:35:24 PM</span> / <span>00:00:14:508</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -316,51 +709,43 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Verify details of manual deposit transaction</h5>
-<span class='badge badge-success'>08.28.2025 2:59:22 PM</span>
-<span class='badge badge-danger'>08.28.2025 2:59:37 PM</span>
-<span class='badge badge-default'>00:00:15:562</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-success'>09.15.2025 3:35:24 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:35:38 PM</span>
+<span class='badge badge-default'>00:00:14:508</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-    
-
-<img data-featherlight='C:\Users\jmendoza\eclipse-workspace\PsslaiMerchantV3//Reports//ScreenShot//verifyManualDepositTransaction.png' src="C:\Users\jmendoza\eclipse-workspace\PsslaiMerchantV3//Reports//ScreenShot//verifyManualDepositTransaction.png">
-  
-    <div class="title">verifyManualDepositTransaction</div>
-
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>2:59:22 PM</td>
+        <td>3:35:24 PM</td>
         <td>
           Login to PSSLAI Web
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>2:59:22 PM</td>
+        <td>3:35:24 PM</td>
         <td>
           Navigate to CashIn-Deposit
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>2:59:24 PM</td>
+        <td>3:35:25 PM</td>
         <td>
           Verify transaction
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>2:59:37 PM</td>
+        <td>3:35:38 PM</td>
         <td>
           <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: .dtr-control' (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
@@ -397,15 +782,15 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".dtr-control"}
-  (Session info: chrome=139.0.7258.154)
+  (Session info: chrome=140.0.7339.128)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.33.0', revision: '2c6aaad03a'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [90321955c99ebd5df43a7f4c106be793, findElement {value=.dtr-control, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.154, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\jmendoza\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56173}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56173/devtoo..., se:cdpVersion: 139.0.7258.154, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 90321955c99ebd5df43a7f4c106be793
-	at jdk.internal.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
+Command: [1eee45be19509358c7a88a35e71ade1a, findElement {value=.dtr-control, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\jmendoza\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57825}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57825/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1eee45be19509358c7a88a35e71ade1a
+	at jdk.internal.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
@@ -432,19 +817,34 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
           
         </td>
       </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:35:38 PM</td>
+        <td>
+          Screenshot of failure
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\jmendoza\eclipse-workspace\PsslaiMerchantV3//Reports//ScreenShot//verifyManualDepositTransaction.png' src="C:\Users\jmendoza\eclipse-workspace\PsslaiMerchantV3//Reports//ScreenShot//verifyManualDepositTransaction.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
   </tbody>
 </table>
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="6"
+        <li class="test-item"  status="pass" test-id="11"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Perform online deposit transaction</p>
             <p class="text-sm">
-              <span>2:59:40 PM</span> / <span>00:00:10:380</span>
+              <span>3:35:45 PM</span> / <span>00:00:11:223</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -453,10 +853,10 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Perform online deposit transaction</h5>
-<span class='badge badge-success'>08.28.2025 2:59:40 PM</span>
-<span class='badge badge-danger'>08.28.2025 2:59:51 PM</span>
-<span class='badge badge-default'>00:00:10:380</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-success'>09.15.2025 3:35:45 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:35:56 PM</span>
+<span class='badge badge-default'>00:00:11:223</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -468,23 +868,30 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>2:59:40 PM</td>
+        <td>3:35:45 PM</td>
         <td>
           Login to PSSLAI Web
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>2:59:40 PM</td>
+        <td>3:35:45 PM</td>
         <td>
           Navigate to CashIn-Deposit
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>2:59:51 PM</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>3:35:46 PM</td>
         <td>
-          Online deposit completed successfully! Reference Number: 10E22F60B3A0
+          Perform Online Deposit Transaction
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>3:35:56 PM</td>
+        <td>
+          Online deposit completed successfully! Reference Number: 10E5CFA312C8
         </td>
       </tr>
   </tbody>
@@ -492,14 +899,14 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="7"
+        <li class="test-item"  status="fail" test-id="12"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Verify details of online deposit transaction</p>
             <p class="text-sm">
-              <span>2:59:53 PM</span> / <span>00:00:04:546</span>
+              <span>3:36:02 PM</span> / <span>00:00:04:910</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -508,59 +915,51 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Verify details of online deposit transaction</h5>
-<span class='badge badge-success'>08.28.2025 2:59:53 PM</span>
-<span class='badge badge-danger'>08.28.2025 2:59:58 PM</span>
-<span class='badge badge-default'>00:00:04:546</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-success'>09.15.2025 3:36:02 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:36:07 PM</span>
+<span class='badge badge-default'>00:00:04:910</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-    
-
-<img data-featherlight='C:\Users\jmendoza\eclipse-workspace\PsslaiMerchantV3//Reports//ScreenShot//verifyOnlineDepositTransaction.png' src="C:\Users\jmendoza\eclipse-workspace\PsslaiMerchantV3//Reports//ScreenShot//verifyOnlineDepositTransaction.png">
-  
-    <div class="title">verifyOnlineDepositTransaction</div>
-
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>2:59:53 PM</td>
+        <td>3:36:02 PM</td>
         <td>
           Login to PSSLAI Web
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>2:59:53 PM</td>
+        <td>3:36:02 PM</td>
         <td>
           Navigate to CashIn-Deposit
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>2:59:54 PM</td>
+        <td>3:36:04 PM</td>
         <td>
           Starting to perform verify online transaction
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>2:59:57 PM</td>
+        <td>3:36:07 PM</td>
         <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: Reference Number should be displayed expected [10E22F60B3A0] but found [PLHAKUNMXXXC]
+          <textarea readonly class="code-block">java.lang.AssertionError: Reference Number should be displayed expected [10E5CFA312C8] but found [PLHB4Q3OZJF3]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
-	at PsslaiMerchantV3.Tests.DepositTest.verifyOnlineDepositTransaction(DepositTest.java:68)
+	at PsslaiMerchantV3.Tests.DepositTest.verifyOnlineDepositTransaction(DepositTest.java:66)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -593,19 +992,34 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
           
         </td>
       </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>3:36:07 PM</td>
+        <td>
+          Screenshot of failure
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='C:\Users\jmendoza\eclipse-workspace\PsslaiMerchantV3//Reports//ScreenShot//verifyOnlineDepositTransaction.png' src="C:\Users\jmendoza\eclipse-workspace\PsslaiMerchantV3//Reports//ScreenShot//verifyOnlineDepositTransaction.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
   </tbody>
 </table>
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="8"
+        <li class="test-item"  status="pass" test-id="13"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Perform withdrawal via Instapay</p>
             <p class="text-sm">
-              <span>3:00:00 PM</span> / <span>00:00:03:906</span>
+              <span>3:36:16 PM</span> / <span>00:00:03:931</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -614,10 +1028,10 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Perform withdrawal via Instapay</h5>
-<span class='badge badge-success'>08.28.2025 3:00:00 PM</span>
-<span class='badge badge-danger'>08.28.2025 3:00:04 PM</span>
-<span class='badge badge-default'>00:00:03:906</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-success'>09.15.2025 3:36:16 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:36:20 PM</span>
+<span class='badge badge-default'>00:00:03:931</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -629,56 +1043,56 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:00 PM</td>
+        <td>3:36:16 PM</td>
         <td>
           Login to PSSLAI Web
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:00 PM</td>
+        <td>3:36:18 PM</td>
         <td>
           Navigate to CashOut-Withdrawal
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:02 PM</td>
+        <td>3:36:18 PM</td>
         <td>
           Click on the Withdraw Funds button
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:03 PM</td>
+        <td>3:36:19 PM</td>
         <td>
           Verify that the Linked Account toggle is off
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:03 PM</td>
+        <td>3:36:19 PM</td>
         <td>
           Fillout the details on Withdrawal Form
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:03 PM</td>
+        <td>3:36:20 PM</td>
         <td>
           Submit the form
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:03 PM</td>
+        <td>3:36:20 PM</td>
         <td>
           Verify Success Toast Message is dislayed
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:00:04 PM</td>
+        <td>3:36:20 PM</td>
         <td>
           Withdrawal Fund completed successfully
         </td>
@@ -688,14 +1102,14 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="9"
+        <li class="test-item"  status="pass" test-id="14"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Withdraw via Instapay (linked accounts)</p>
             <p class="text-sm">
-              <span>3:00:07 PM</span> / <span>00:00:03:665</span>
+              <span>3:36:27 PM</span> / <span>00:00:03:383</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -704,10 +1118,10 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Withdraw via Instapay (linked accounts)</h5>
-<span class='badge badge-success'>08.28.2025 3:00:07 PM</span>
-<span class='badge badge-danger'>08.28.2025 3:00:10 PM</span>
-<span class='badge badge-default'>00:00:03:665</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-success'>09.15.2025 3:36:27 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:36:30 PM</span>
+<span class='badge badge-default'>00:00:03:383</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -719,56 +1133,35 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:07 PM</td>
+        <td>3:36:27 PM</td>
         <td>
           Login to PSSLAI Web
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:08 PM</td>
+        <td>3:36:27 PM</td>
         <td>
           Navigate to CashOut-Withdrawal
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:08 PM</td>
+        <td>3:36:28 PM</td>
         <td>
-          Click on the Withdraw Funds button
+          Starting to perform Withdraw Instapay with Linked Account
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:09 PM</td>
-        <td>
-          Verify that the Linked Account toggle is on
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:09 PM</td>
-        <td>
-          Fillout the details on Withdrawal Form
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:10 PM</td>
-        <td>
-          Submit the form
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:10 PM</td>
+        <td>3:36:29 PM</td>
         <td>
           Verify Success Toast Message is dislayed
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:00:10 PM</td>
+        <td>3:36:30 PM</td>
         <td>
           Withdrawal Fund completed successfully
         </td>
@@ -778,14 +1171,14 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="10"
+        <li class="test-item"  status="pass" test-id="15"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Perform withdrawal via Pesonet</p>
             <p class="text-sm">
-              <span>3:00:16 PM</span> / <span>00:00:04:158</span>
+              <span>3:36:36 PM</span> / <span>00:00:03:886</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -794,10 +1187,10 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Perform withdrawal via Pesonet</h5>
-<span class='badge badge-success'>08.28.2025 3:00:16 PM</span>
-<span class='badge badge-danger'>08.28.2025 3:00:20 PM</span>
-<span class='badge badge-default'>00:00:04:158</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span class='badge badge-success'>09.15.2025 3:36:36 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:36:40 PM</span>
+<span class='badge badge-default'>00:00:03:886</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -809,56 +1202,56 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:16 PM</td>
+        <td>3:36:36 PM</td>
         <td>
           Login to PSSLAI Web
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:16 PM</td>
+        <td>3:36:37 PM</td>
         <td>
           Navigate to CashOut-Withdrawal
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:17 PM</td>
+        <td>3:36:38 PM</td>
         <td>
           Click on the Withdraw Funds button
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:19 PM</td>
+        <td>3:36:39 PM</td>
         <td>
           Verify that the Linked Account toggle is off
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:19 PM</td>
+        <td>3:36:39 PM</td>
         <td>
           Fillout the details on Withdrawal Form
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:19 PM</td>
+        <td>3:36:40 PM</td>
         <td>
           Submit the form
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:19 PM</td>
+        <td>3:36:40 PM</td>
         <td>
           Verify Success Toast Message is dislayed
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:00:20 PM</td>
+        <td>3:36:40 PM</td>
         <td>
           Withdrawal Fund completed successfully
         </td>
@@ -868,14 +1261,14 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="11"
+        <li class="test-item"  status="pass" test-id="16"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Withdraw via pesonet (linked accounts)</p>
             <p class="text-sm">
-              <span>3:00:25 PM</span> / <span>00:00:04:294</span>
+              <span>3:36:47 PM</span> / <span>00:00:03:452</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -884,10 +1277,10 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Withdraw via pesonet (linked accounts)</h5>
-<span class='badge badge-success'>08.28.2025 3:00:25 PM</span>
-<span class='badge badge-danger'>08.28.2025 3:00:29 PM</span>
-<span class='badge badge-default'>00:00:04:294</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span class='badge badge-success'>09.15.2025 3:36:47 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:36:51 PM</span>
+<span class='badge badge-default'>00:00:03:452</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -899,56 +1292,56 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:25 PM</td>
+        <td>3:36:47 PM</td>
         <td>
           Login to PSSLAI Web
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:25 PM</td>
+        <td>3:36:47 PM</td>
         <td>
           Navigate to CashOut-Withdrawal
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:26 PM</td>
+        <td>3:36:48 PM</td>
         <td>
           Click on the Withdraw Funds button
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:27 PM</td>
+        <td>3:36:50 PM</td>
         <td>
           Verify that the Linked Account toggle is on
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:27 PM</td>
+        <td>3:36:50 PM</td>
         <td>
           Fillout the details on Withdrawal Form
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:28 PM</td>
+        <td>3:36:50 PM</td>
         <td>
           Submit the form
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:28 PM</td>
+        <td>3:36:50 PM</td>
         <td>
           Verify Success Toast Message is dislayed
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:00:29 PM</td>
+        <td>3:36:51 PM</td>
         <td>
           Withdrawal Fund completed successfully
         </td>
@@ -958,14 +1351,14 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="12"
+        <li class="test-item"  status="pass" test-id="17"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">Perform Bulkdisbursement Transaction</p>
             <p class="text-sm">
-              <span>3:00:34 PM</span> / <span>00:00:03:098</span>
+              <span>3:37:07 PM</span> / <span>00:00:03:661</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -974,10 +1367,10 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">Perform Bulkdisbursement Transaction</h5>
-<span class='badge badge-success'>08.28.2025 3:00:34 PM</span>
-<span class='badge badge-danger'>08.28.2025 3:00:37 PM</span>
-<span class='badge badge-default'>00:00:03:098</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span class='badge badge-success'>09.15.2025 3:37:07 PM</span>
+<span class='badge badge-danger'>09.15.2025 3:37:11 PM</span>
+<span class='badge badge-default'>00:00:03:661</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -989,49 +1382,49 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:34 PM</td>
+        <td>3:37:07 PM</td>
         <td>
           Login to PSSLAI Web
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:35 PM</td>
+        <td>3:37:07 PM</td>
         <td>
           Navigate to CashOut-Disbursement
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:36 PM</td>
+        <td>3:37:09 PM</td>
         <td>
           Click on the Create Bulk Disbursement button
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:37 PM</td>
+        <td>3:37:10 PM</td>
         <td>
           Verify the bulk disbursement fee description
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:37 PM</td>
+        <td>3:37:10 PM</td>
         <td>
           Fill-out the details on Bulk Disbursement form
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:00:37 PM</td>
+        <td>3:37:11 PM</td>
         <td>
           Submit the form
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>3:00:37 PM</td>
+        <td>3:37:11 PM</td>
         <td>
           Bulk Disbursement completed successfully!
         </td>
@@ -1054,7 +1447,7 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
@@ -1082,9 +1475,9 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>14:59:22 PM</td>
+<td>15:35:24 PM</td>
 <td>
-<a href="#" class="linked" test-id='5' id='5'>Verify details of manual deposit transaction</a>
+<a href="#" class="linked" test-id='10' id='10'>Verify details of manual deposit transaction</a>
 </td>
 </tr>
 </tbody>
@@ -1096,12 +1489,12 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">java.lang.AssertionError</p>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>java.lang.AssertionError</h4>
+<h4>org.openqa.selenium.NoSuchElementException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -1115,9 +1508,49 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>14:59:53 PM</td>
+<td>15:33:56 PM</td>
 <td>
-<a href="#" class="linked" test-id='7' id='7'>Verify details of online deposit transaction</a>
+<a href="#" class="linked" test-id='1' id='1'>Login with valid credentials</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:34:41 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>Search Member from Member List</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>15:36:02 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>Verify details of online deposit transaction</a>
 </td>
 </tr>
 </tbody>
@@ -1137,25 +1570,25 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Aug 28, 2025 02:58:41 PM</h3>
+<h3>Sep 15, 2025 03:33:44 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Aug 28, 2025 03:00:38 PM</h3>
+<h3>Sep 15, 2025 03:37:11 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>10</h3>
+<h3>13</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>2</h3>
+<h3>4</h3>
 </div></div>
 </div>
 </div>
@@ -1171,12 +1604,12 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='83%'>
-<b>10</b> tests passed
+<div><small data-tooltip='76%'>
+<b>13</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='16%'><b>2</b> tests failed,
+<small data-tooltip='23%'><b>4</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -1194,10 +1627,10 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='16%'><b>10</b> events passed</small></div>
+<div><small data-tooltip='16%'><b>13</b> events passed</small></div>
 <div>
-<small data-tooltip='3%'><b>2</b> events failed,
-<b data-tooltip='%'>50</b> others
+<small data-tooltip='10%'><b>8</b> events failed,
+<b data-tooltip='%'>57</b> others
 </small>
 </div>
 </div>
@@ -1213,7 +1646,7 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 </div></div>
 <script>
 var timeline = {
-"Login with valid credentials":12.418,"Download member list successfully":3.564,"View member list in UI":5.684,"Perform manual deposit transaction":4.869,"Verify details of manual deposit transaction":15.562,"Perform online deposit transaction":10.38,"Verify details of online deposit transaction":4.546,"Perform withdrawal via Instapay":3.906,"Withdraw via Instapay (linked accounts)":3.665,"Perform withdrawal via Pesonet":4.158,"Withdraw via pesonet (linked accounts)":4.294,"Perform Bulkdisbursement Transaction":3.098
+"Login with valid credentials":0.143,"Login with invalid credencials":0.404,"Login with incorrect password":0.48,"Login without credencials":0.303,"Download member list successfully":5.278,"Search Member from Member List":2.766,"View member details":3.158,"View member list in UI":2.226,"Perform manual deposit transaction":6.956,"Verify details of manual deposit transaction":14.508,"Perform online deposit transaction":11.223,"Verify details of online deposit transaction":4.91,"Perform withdrawal via Instapay":3.931,"Withdraw via Instapay (linked accounts)":3.383,"Perform withdrawal via Pesonet":3.886,"Withdraw via pesonet (linked accounts)":3.452,"Perform Bulkdisbursement Transaction":3.661
 };
 </script>
 <div class="row">
@@ -1240,8 +1673,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 10,
-failParent: 2,
+passParent: 13,
+failParent: 4,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -1257,11 +1690,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 10,
-failEvents: 2,
+passEvents: 13,
+failEvents: 8,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 50
+infoEvents: 57
 };
 </script>        </div>
       </div>

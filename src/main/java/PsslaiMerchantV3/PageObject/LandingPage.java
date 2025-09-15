@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import PsslaiMerchantV3.AbstractComponents.AbstractComponents;
 
-public class LandingPage extends AbstractComponents{
+public class LandingPage extends AbstractComponents {
 
 	WebDriver driver;
 
@@ -24,6 +24,8 @@ public class LandingPage extends AbstractComponents{
 	WebElement passwordField;
 	@FindBy(id = "login-submit-button")
 	WebElement submit;
+	@FindBy(xpath = "//form[@id='sign-in-form']//p[@class='error']")
+	WebElement errorMessage;
 
 	public void goTo() {
 		driver.get("https://psslai-sit.traxionpay.com/");
@@ -35,6 +37,11 @@ public class LandingPage extends AbstractComponents{
 		submit.click();
 		DashBoardPage dashboardPage = new DashBoardPage(driver);
 		return dashboardPage;
+	}
+	
+	public String getErrorMessage() {
+		waitForElementToAppear(errorMessage);
+		return errorMessage.getText();
 	}
 
 }

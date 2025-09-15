@@ -14,7 +14,7 @@ public class ExtentReportNg {
 				System.getProperty("user.dir") + "//Reports//reports.html");
 		reporter.config().setDocumentTitle("Test Results");
 		reporter.config().setReportName("PSSLAI Merchant Webtool");
-		reporter.config().setTheme(Theme.DARK);
+		reporter.config().setTheme(Theme.STANDARD);
 
 		extent = new ExtentReports();
 		extent.setSystemInfo("Environment", "QA-SIT");

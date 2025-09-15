@@ -20,17 +20,10 @@ public class WithdrawalTest extends BaseTest {
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
 		logInfo("Navigate to CashOut-Withdrawal");
 		CashOutWithdrawalPage withdrawal = dashboardPage.goToCashOutMenu_Withdrawal();
-		logInfo("Click on the Withdraw Funds button");
-		withdrawal.clickWithdrawFundsButton();
-		logInfo("Verify that the Linked Account toggle is on");
-		Assert.assertTrue(withdrawal.linkedAccountsToggle());
-		logInfo("Fillout the details on Withdrawal Form");
-		withdrawal.withdrawalFundsFillOutLinkedAccounts(input.get("bankTypeNum"), input.get("amount"));
-		withdrawal.inputValidation(input.get("userPassword"));
-		logInfo("Submit the form");
-		withdrawal.submitWithdrawFunds();
+		logInfo("Starting to perform Withdraw Instapay with Linked Account");
+		withdrawal.performWithdrawInspayLinkedAccount(input.get("bankTypeNum"), input.get("amount"), input.get("userPassword"));
 		logInfo("Verify Success Toast Message is dislayed");
-		Assert.assertTrue(withdrawal.getSuccessToastMsg());
+		Assert.assertTrue(withdrawal.getSuccessToastMsg()); 
 		logPass("Withdrawal Fund completed successfully");
 
 	}

@@ -26,7 +26,6 @@ public class CashOutWithdrawalPage extends AbstractComponents {
 	WebElement instapayType;
 	@FindBy(xpath = "//span[@class='form-selectgroup-title strong mb-1'][text()=\"via PesoNet\"]")
 	WebElement pesonetType;
-
 	@FindBy(id = "linked-accounts-toggle")
 	WebElement linkedAccountToggle;
 	@FindBy(id = "withdraw_recipient_bank")
@@ -55,6 +54,13 @@ public class CashOutWithdrawalPage extends AbstractComponents {
 		withdrawFundsButton.click();
 		waitForElementToAppear(modalTitle);
 
+	}
+	
+	public void performWithdrawInspayLinkedAccount(String bankAccount, String amount, String input) {
+		clickWithdrawFundsButton();
+		withdrawalFundsFillOutLinkedAccounts(bankAccount, amount);
+		inputValidation(input);
+		submitWithdrawFunds();
 	}
 	
 	public void pisonetTransactionType() {

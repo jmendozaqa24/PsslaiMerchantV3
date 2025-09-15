@@ -2,6 +2,8 @@
 	{
 		"userName": "jmendoza+0002@traxiontech.net",
 		"userPassword": "Traxion123!!",
-		"successMsg": "Your request to generate the member list has been received. The file is currently being processed and will be sent to your email shortly."	
+		"successMsg": "Your request to generate the member list has been received. The file is currently being processed and will be sent to your email shortly.",
+		"firstName": "Kevin",
+		"fullName": "Kevin Edward Gile Pasimio"	
 	}
 ]

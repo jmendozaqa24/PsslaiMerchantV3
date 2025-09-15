@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Regression_Test" class="navigator-link ">
-                    <span>1 group</span>
+                    <span>2 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">12 methods, 2 failed,   10 passed</span>
+                    <span class="method-stats">17 methods, 4 failed,   13 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,6 +101,16 @@
                       <a href="#" panel-name="suite-Regression_Test" class="show-methods failed suite-Regression_Test"> (show)</a> <!-- show-methods failed suite-Regression_Test -->
                     </span>
                     <div class="method-list-content failed suite-Regression_Test">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression_Test" title="PsslaiMerchantV3.Tests.LoginTest" class="method navigator-link" hash-for-method="loginValidCreds({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)">loginValidCreds({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression_Test" title="PsslaiMerchantV3.Tests.MemberTest" class="method navigator-link" hash-for-method="searchMember({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)">searchMember({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Regression_Test" title="PsslaiMerchantV3.Tests.DepositTest" class="method navigator-link" hash-for-method="verifyManualDepositTransaction({userPassword=Traxion123!, amount=1000.00, onlinebankTypeNum=2, paymentMethod=36823, userName=psslai...)">verifyManualDepositTransaction({userPassword=Traxion123!, amount=1000.00, onlinebankTypeNum=2, paymentMethod=36823, userName=psslai...)</a> <!-- method navigator-link -->
@@ -127,12 +137,22 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Regression_Test" title="PsslaiMerchantV3.Tests.MemberTest" class="method navigator-link" hash-for-method="downloadMemberList({userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. T...)">downloadMemberList({userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. T...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Regression_Test" title="PsslaiMerchantV3.Tests.MemberTest" class="method navigator-link" hash-for-method="downloadMemberList({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)">downloadMemberList({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Regression_Test" title="PsslaiMerchantV3.Tests.LoginTest" class="method navigator-link" hash-for-method="loginValidCreds({userName=jmendoza+0002@traxiontech.net, userPassword=Traxion123!!})">loginValidCreds({userName=jmendoza+0002@traxiontech.net, userPassword=Traxion123!!})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Regression_Test" title="PsslaiMerchantV3.Tests.LoginTest" class="method navigator-link" hash-for-method="loginwithInvalidCreds({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)">loginwithInvalidCreds({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression_Test" title="PsslaiMerchantV3.Tests.LoginTest" class="method navigator-link" hash-for-method="loginwithInvalidPassword({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)">loginwithInvalidPassword({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression_Test" title="PsslaiMerchantV3.Tests.LoginTest" class="method navigator-link" hash-for-method="loginwithoutcredencials({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)">loginwithoutcredencials({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -147,7 +167,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Regression_Test" title="PsslaiMerchantV3.Tests.MemberTest" class="method navigator-link" hash-for-method="viewMemberList({userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. T...)">viewMemberList({userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. T...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Regression_Test" title="PsslaiMerchantV3.Tests.MemberTest" class="method navigator-link" hash-for-method="viewMemberDetails({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)">viewMemberDetails({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression_Test" title="PsslaiMerchantV3.Tests.MemberTest" class="method navigator-link" hash-for-method="viewMemberList({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)">viewMemberList({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -185,6 +210,52 @@
           <div class="suite-Regression_Test-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
+              <span class="class-name">PsslaiMerchantV3.Tests.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginValidCreds({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)">
+                  </a> <!-- loginValidCreds({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...) -->
+                  <span class="method-name">loginValidCreds</span>
+                  <span class="parameters">({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test, userName=jmendoza+0002@traxiontech.net, emptyusername=})</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#identity&quot;}
+  (Session info: chrome=140.0.7339.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [82149316c90d37ae3f973de25df5a006, findElement {value=identity, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\jmendoza\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63191}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63191/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 82149316c90d37ae3f973de25df5a006
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
+	at PsslaiMerchantV3.PageObject.LandingPage.login(LandingPage.java:35)
+	at PsslaiMerchantV3.Tests.LoginTest.loginValidCreds(LoginTest.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Login with valid credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression_Test-class-failed -->
+          <div class="suite-Regression_Test-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
               <span class="class-name">PsslaiMerchantV3.Tests.DepositTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -202,14 +273,14 @@
 	at PsslaiMerchantV3.Tests.DepositTest.verifyManualDepositTransaction(DepositTest.java:38)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.dtr-control&quot;}
-  (Session info: chrome=139.0.7258.154)
+  (Session info: chrome=140.0.7339.128)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [90321955c99ebd5df43a7f4c106be793, findElement {value=.dtr-control, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.154, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\jmendoza\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56173}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56173/devtoo..., se:cdpVersion: 139.0.7258.154, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 90321955c99ebd5df43a7f4c106be793
+Command: [1eee45be19509358c7a88a35e71ade1a, findElement {value=.dtr-control, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\jmendoza\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57825}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57825/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1eee45be19509358c7a88a35e71ade1a
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -241,13 +312,36 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
                   </a> <!-- verifyOnlineDepositTransaction({userPassword=Traxion123!, amount=1000.00, onlinebankTypeNum=2, paymentMethod=36823, userName=psslai...) -->
                   <span class="method-name">verifyOnlineDepositTransaction</span>
                   <span class="parameters">({userPassword=Traxion123!, amount=1000.00, onlinebankTypeNum=2, paymentMethod=36823, userName=psslai-sit@mailinator.com, usernameBogus=a, userPassBogus=a, manualbankType=BDO_UNIBANK})</span>
-                  <div class="stack-trace">java.lang.AssertionError: Reference Number should be displayed expected [10E22F60B3A0] but found [PLHAKUNMXXXC]
-	at PsslaiMerchantV3.Tests.DepositTest.verifyOnlineDepositTransaction(DepositTest.java:68)
+                  <div class="stack-trace">java.lang.AssertionError: Reference Number should be displayed expected [10E5CFA312C8] but found [PLHB4Q3OZJF3]
+	at PsslaiMerchantV3.Tests.DepositTest.verifyOnlineDepositTransaction(DepositTest.java:66)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Verify details of online deposit transaction)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression_Test-class-failed -->
+          <div class="suite-Regression_Test-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">PsslaiMerchantV3.Tests.MemberTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchMember({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)">
+                  </a> <!-- searchMember({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...) -->
+                  <span class="method-name">searchMember</span>
+                  <span class="parameters">({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. The file is currently being processed and will be sent to your email shortly., userName=jmendoza+0002@traxiontech.net})</span>
+                  <div class="stack-trace">java.lang.AssertionError: Name does not match expected [James Jomel] but found [Kevin Edward Gile Pasimio]
+	at PsslaiMerchantV3.Tests.MemberTest.searchMember(MemberTest.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Search Member from Member List)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -260,12 +354,32 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginValidCreds({userName=jmendoza+0002@traxiontech.net, userPassword=Traxion123!!})">
-                  </a> <!-- loginValidCreds({userName=jmendoza+0002@traxiontech.net, userPassword=Traxion123!!}) -->
-                  <span class="method-name">loginValidCreds</span>
-                  <span class="parameters">({userName=jmendoza+0002@traxiontech.net, userPassword=Traxion123!!})</span>
+                  <a name="loginwithInvalidCreds({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)">
+                  </a> <!-- loginwithInvalidCreds({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...) -->
+                  <span class="method-name">loginwithInvalidCreds</span>
+                  <span class="parameters">({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test, userName=jmendoza+0002@traxiontech.net, emptyusername=})</span>
                   <em>
-(Login with valid credentials)                  </em>
+(Login with invalid credencials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginwithInvalidPassword({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)">
+                  </a> <!-- loginwithInvalidPassword({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...) -->
+                  <span class="method-name">loginwithInvalidPassword</span>
+                  <span class="parameters">({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test, userName=jmendoza+0002@traxiontech.net, emptyusername=})</span>
+                  <em>
+(Login with incorrect password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginwithoutcredencials({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)">
+                  </a> <!-- loginwithoutcredencials({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...) -->
+                  <span class="method-name">loginwithoutcredencials</span>
+                  <span class="parameters">({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test, userName=jmendoza+0002@traxiontech.net, emptyusername=})</span>
+                  <em>
+(Login without credencials)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -294,34 +408,6 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
                   <span class="parameters">({userPassword=Traxion123!, amount=1000.00, onlinebankTypeNum=2, paymentMethod=36823, userName=psslai-sit@mailinator.com, usernameBogus=a, userPassBogus=a, manualbankType=BDO_UNIBANK})</span>
                   <em>
 (Perform online deposit transaction)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Regression_Test-class-passed -->
-          <div class="suite-Regression_Test-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">PsslaiMerchantV3.Tests.MemberTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="downloadMemberList({userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. T...)">
-                  </a> <!-- downloadMemberList({userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. T...) -->
-                  <span class="method-name">downloadMemberList</span>
-                  <span class="parameters">({userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. The file is currently being processed and will be sent to your email shortly., userName=jmendoza+0002@traxiontech.net})</span>
-                  <em>
-(Download member list successfully)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="viewMemberList({userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. T...)">
-                  </a> <!-- viewMemberList({userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. T...) -->
-                  <span class="method-name">viewMemberList</span>
-                  <span class="parameters">({userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. The file is currently being processed and will be sent to your email shortly., userName=jmendoza+0002@traxiontech.net})</span>
-                  <em>
-(View member list in UI)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -377,6 +463,44 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
           <div class="suite-Regression_Test-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">PsslaiMerchantV3.Tests.MemberTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="downloadMemberList({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)">
+                  </a> <!-- downloadMemberList({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...) -->
+                  <span class="method-name">downloadMemberList</span>
+                  <span class="parameters">({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. The file is currently being processed and will be sent to your email shortly., userName=jmendoza+0002@traxiontech.net})</span>
+                  <em>
+(Download member list successfully)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="viewMemberDetails({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)">
+                  </a> <!-- viewMemberDetails({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...) -->
+                  <span class="method-name">viewMemberDetails</span>
+                  <span class="parameters">({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. The file is currently being processed and will be sent to your email shortly., userName=jmendoza+0002@traxiontech.net})</span>
+                  <em>
+(View member details)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="viewMemberList({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)">
+                  </a> <!-- viewMemberList({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...) -->
+                  <span class="method-name">viewMemberList</span>
+                  <span class="parameters">({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. The file is currently being processed and will be sent to your email shortly., userName=jmendoza+0002@traxiontech.net})</span>
+                  <em>
+(View member list in UI)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression_Test-class-passed -->
+          <div class="suite-Regression_Test-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">PsslaiMerchantV3.Tests.DisbursementTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -405,7 +529,7 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
   &lt;listeners&gt;
     &lt;listener class-name=&quot;PsslaiMerchantV3.TestComponents.Listener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;3&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;PsslaiMerchantV3.Tests.LoginTest&quot;/&gt;
       &lt;class name=&quot;PsslaiMerchantV3.Tests.MemberTest&quot;/&gt;
@@ -436,6 +560,22 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
+              <span class="test-group-name">Negative</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginwithInvalidCreds</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginwithInvalidPassword</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginwithoutcredencials</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
               <span class="test-group-name">Regression</span>
               <br/>
               <div class="method-in-group">
@@ -451,6 +591,18 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
+                <span class="method-in-group-name">loginwithInvalidCreds</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginwithInvalidPassword</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginwithoutcredencials</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">manualDeposit</span>
                 <br/>
               </div> <!-- method-in-group -->
@@ -459,11 +611,19 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
+                <span class="method-in-group-name">searchMember</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">verifyManualDepositTransaction</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
                 <span class="method-in-group-name">verifyOnlineDepositTransaction</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">viewMemberDetails</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
@@ -503,55 +663,75 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(12);
+data.addRows(17);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyManualDepositTransaction')
 data.setCell(0, 2, 'PsslaiMerchantV3.Tests.DepositTest')
-data.setCell(0, 3, 15428);
+data.setCell(0, 3, 14401);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginValidCreds')
-data.setCell(1, 2, 'PsslaiMerchantV3.Tests.LoginTest')
-data.setCell(1, 3, 12429);
+data.setCell(1, 1, 'onlineDeposit')
+data.setCell(1, 2, 'PsslaiMerchantV3.Tests.DepositTest')
+data.setCell(1, 3, 11224);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'onlineDeposit')
+data.setCell(2, 1, 'manualDeposit')
 data.setCell(2, 2, 'PsslaiMerchantV3.Tests.DepositTest')
-data.setCell(2, 3, 10380);
+data.setCell(2, 3, 6957);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'viewMemberList')
+data.setCell(3, 1, 'downloadMemberList')
 data.setCell(3, 2, 'PsslaiMerchantV3.Tests.MemberTest')
-data.setCell(3, 3, 5687);
+data.setCell(3, 3, 5279);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'manualDeposit')
+data.setCell(4, 1, 'verifyOnlineDepositTransaction')
 data.setCell(4, 2, 'PsslaiMerchantV3.Tests.DepositTest')
-data.setCell(4, 3, 4870);
+data.setCell(4, 3, 4757);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyOnlineDepositTransaction')
-data.setCell(5, 2, 'PsslaiMerchantV3.Tests.DepositTest')
-data.setCell(5, 3, 4373);
+data.setCell(5, 1, 'withdrawalInstapay')
+data.setCell(5, 2, 'PsslaiMerchantV3.Tests.WithdrawalTest')
+data.setCell(5, 3, 3932);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'withdrawalPesonetLinkedAccounts')
+data.setCell(6, 1, 'withdrawalPesonet')
 data.setCell(6, 2, 'PsslaiMerchantV3.Tests.WithdrawalTest')
-data.setCell(6, 3, 4295);
+data.setCell(6, 3, 3887);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'withdrawalPesonet')
-data.setCell(7, 2, 'PsslaiMerchantV3.Tests.WithdrawalTest')
-data.setCell(7, 3, 4159);
+data.setCell(7, 1, 'bulkDisbursementTransaction')
+data.setCell(7, 2, 'PsslaiMerchantV3.Tests.DisbursementTest')
+data.setCell(7, 3, 3662);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'withdrawalInstapay')
+data.setCell(8, 1, 'withdrawalPesonetLinkedAccounts')
 data.setCell(8, 2, 'PsslaiMerchantV3.Tests.WithdrawalTest')
-data.setCell(8, 3, 3908);
+data.setCell(8, 3, 3453);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'withdrawalInstapayLinkedAccounts')
 data.setCell(9, 2, 'PsslaiMerchantV3.Tests.WithdrawalTest')
-data.setCell(9, 3, 3666);
+data.setCell(9, 3, 3385);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'downloadMemberList')
+data.setCell(10, 1, 'viewMemberDetails')
 data.setCell(10, 2, 'PsslaiMerchantV3.Tests.MemberTest')
-data.setCell(10, 3, 3566);
+data.setCell(10, 3, 3159);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'bulkDisbursementTransaction')
-data.setCell(11, 2, 'PsslaiMerchantV3.Tests.DisbursementTest')
-data.setCell(11, 3, 3098);
+data.setCell(11, 1, 'searchMember')
+data.setCell(11, 2, 'PsslaiMerchantV3.Tests.MemberTest')
+data.setCell(11, 3, 2620);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'viewMemberList')
+data.setCell(12, 2, 'PsslaiMerchantV3.Tests.MemberTest')
+data.setCell(12, 3, 2227);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'loginwithInvalidPassword')
+data.setCell(13, 2, 'PsslaiMerchantV3.Tests.LoginTest')
+data.setCell(13, 3, 480);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'loginwithInvalidCreds')
+data.setCell(14, 2, 'PsslaiMerchantV3.Tests.LoginTest')
+data.setCell(14, 3, 406);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'loginwithoutcredencials')
+data.setCell(15, 2, 'PsslaiMerchantV3.Tests.LoginTest')
+data.setCell(15, 3, 304);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'loginValidCreds')
+data.setCell(16, 2, 'PsslaiMerchantV3.Tests.LoginTest')
+data.setCell(16, 3, 45);
 window.suiteTableData['Regression_Test']= { tableData: data, tableDiv: 'times-div-Regression_Test'}
 return data;
 }
@@ -588,160 +768,224 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">loginValidCreds({userName=jmendoza+0002@traxiontech.net, userPassword=Traxion123!!})</span>
-                <span class="method-start">2994 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">loginValidCreds({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)</span>
+                <span class="method-start">11798 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">15426 ms</span>
+                <span class="method-start">11959 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">12339 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginwithInvalidCreds({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)</span>
+                <span class="method-start">19253 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">19662 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">19946 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginwithInvalidPassword({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)</span>
+                <span class="method-start">26641 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">27122 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">27293 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginwithoutcredencials({userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test...)</span>
+                <span class="method-start">35170 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">35475 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">PsslaiMerchantV3.Tests.MemberTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">15605 ms</span>
+                <span class="method-start">35626 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">downloadMemberList({userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. T...)</span>
-                <span class="method-start">16990 ms</span>
+                <span class="method-name">downloadMemberList({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)</span>
+                <span class="method-start">43526 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">20558 ms</span>
+                <span class="method-start">48806 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">20765 ms</span>
+                <span class="method-start">49005 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">viewMemberList({userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. T...)</span>
-                <span class="method-start">23058 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">searchMember({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)</span>
+                <span class="method-start">56648 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">28746 ms</span>
+                <span class="method-start">59415 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">59591 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">viewMemberDetails({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)</span>
+                <span class="method-start">66442 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">69602 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">69794 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">viewMemberList({firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your req...)</span>
+                <span class="method-start">75970 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">78198 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">PsslaiMerchantV3.Tests.DepositTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">28910 ms</span>
+                <span class="method-start">78397 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">manualDeposit({userPassword=Traxion123!, amount=1000.00, onlinebankTypeNum=2, paymentMethod=36823, userName=psslai...)</span>
-                <span class="method-start">31884 ms</span>
+                <span class="method-start">85218 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">36755 ms</span>
+                <span class="method-start">92176 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">36932 ms</span>
+                <span class="method-start">92447 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyManualDepositTransaction({userPassword=Traxion123!, amount=1000.00, onlinebankTypeNum=2, paymentMethod=36823, userName=psslai...)</span>
-                <span class="method-start">40321 ms</span>
+                <span class="method-start">98957 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">55887 ms</span>
+                <span class="method-start">113467 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">56167 ms</span>
+                <span class="method-start">113770 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">onlineDeposit({userPassword=Traxion123!, amount=1000.00, onlinebankTypeNum=2, paymentMethod=36823, userName=psslai...)</span>
-                <span class="method-start">58572 ms</span>
+                <span class="method-start">120493 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">68952 ms</span>
+                <span class="method-start">131718 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">69399 ms</span>
+                <span class="method-start">131985 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyOnlineDepositTransaction({userPassword=Traxion123!, amount=1000.00, onlinebankTypeNum=2, paymentMethod=36823, userName=psslai...)</span>
-                <span class="method-start">71355 ms</span>
+                <span class="method-start">137339 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">75902 ms</span>
+                <span class="method-start">142251 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">PsslaiMerchantV3.Tests.WithdrawalTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">76100 ms</span>
+                <span class="method-start">142438 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">withdrawalInstapay({userPassword=Traxion123!, amount=1000.00, bankTypeNum=26, accountName=QA Test BDO, bankTypeNumNL=20...)</span>
-                <span class="method-start">78374 ms</span>
+                <span class="method-start">151582 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">82282 ms</span>
+                <span class="method-start">155514 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">82442 ms</span>
+                <span class="method-start">155703 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">withdrawalInstapayLinkedAccounts({userPassword=Traxion123!, amount=1000.00, bankTypeNum=26, accountName=QA Test BDO, bankTypeNumNL=20...)</span>
-                <span class="method-start">85130 ms</span>
+                <span class="method-start">161883 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">88797 ms</span>
+                <span class="method-start">165269 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">88950 ms</span>
+                <span class="method-start">165473 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">withdrawalPesonet({userPassword=Traxion123!, amount=1000.00, bankTypeNum=26, accountName=QA Test BDO, bankTypeNumNL=20...)</span>
-                <span class="method-start">94287 ms</span>
+                <span class="method-start">171778 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">98447 ms</span>
+                <span class="method-start">175666 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">98661 ms</span>
+                <span class="method-start">175852 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">withdrawalPesonetLinkedAccounts({userPassword=Traxion123!, amount=1000.00, bankTypeNum=26, accountName=QA Test BDO, bankTypeNumNL=20...)</span>
-                <span class="method-start">103031 ms</span>
+                <span class="method-start">182438 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">107327 ms</span>
+                <span class="method-start">185891 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">PsslaiMerchantV3.Tests.DisbursementTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">107686 ms</span>
+                <span class="method-start">186064 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">bulkDisbursementTransaction({userPassword=Traxion123!, userName=psslai-sit@mailinator.com, bulkDisbursementFeeDscrptn=For Interb...)</span>
-                <span class="method-start">112721 ms</span>
+                <span class="method-start">202282 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">115819 ms</span>
+                <span class="method-start">205945 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

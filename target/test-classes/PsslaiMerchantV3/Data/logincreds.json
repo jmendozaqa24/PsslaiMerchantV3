@@ -1,6 +1,12 @@
 [
 	{
 		"userName": "jmendoza+0002@traxiontech.net",
-		"userPassword": "Traxion123!!"	
+		"userPassword": "Traxion123!!",
+		"invalidUserName": "test@mail.net",
+		"invalidPassword": "pass1test",
+		"emptyusername": "",
+		"emptypassword": ""		
 	}
+
+	
 ]

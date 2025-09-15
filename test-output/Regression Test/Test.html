@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>10/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>13/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Aug 28 14:58:41 SGT 2025</td>
+<td>Started on:</td><td>Mon Sep 15 15:33:44 SGT 2025</td>
 </tr>
-<tr><td>Total time:</td><td>116 seconds (116248 ms)</td>
+<tr><td>Total time:</td><td>206 seconds (206325 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,18 +76,64 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='PsslaiMerchantV3.Tests.DepositTest.verifyOnlineDepositTransaction()'><b>verifyOnlineDepositTransaction</b><br>Test class: PsslaiMerchantV3.Tests.DepositTest<br>Test method: Verify details of online deposit transaction<br>Parameters: {userPassword=Traxion123!, amount=1000.00, onlinebankTypeNum=2, paymentMethod=36823, userName=psslai-sit@mailinator.com, usernameBogus=a, userPassBogus=a, manualbankType=BDO_UNIBANK}</td>
-<td><div><pre>java.lang.AssertionError: Reference Number should be displayed expected [10E22F60B3A0] but found [PLHAKUNMXXXC]
-	at PsslaiMerchantV3.Tests.DepositTest.verifyOnlineDepositTransaction(DepositTest.java:68)
+<td title='PsslaiMerchantV3.Tests.LoginTest.loginValidCreds()'><b>loginValidCreds</b><br>Test class: PsslaiMerchantV3.Tests.LoginTest<br>Test method: Login with valid credentials<br>Parameters: {userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test, userName=jmendoza+0002@traxiontech.net, emptyusername=}</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#identity&quot;}
+  (Session info: chrome=140.0.7339.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [82149316c90d37ae3f973de25df5a006, findElement {value=identity, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\jmendoza\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63191}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63191/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 82149316c90d37ae3f973de25df5a006
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
+	at PsslaiMerchantV3.PageObject.LandingPage.login(LandingPage.java:35)
+	at PsslaiMerchantV3.Tests.LoginTest.loginValidCreds(LoginTest.java:19)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1644606631", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1644606631'><pre>java.lang.AssertionError: Reference Number should be displayed expected [10E22F60B3A0] but found [PLHAKUNMXXXC]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at PsslaiMerchantV3.Tests.DepositTest.verifyOnlineDepositTransaction(DepositTest.java:68)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace891715540", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace891715540'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#identity&quot;}
+  (Session info: chrome=140.0.7339.128)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [82149316c90d37ae3f973de25df5a006, findElement {value=identity, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\jmendoza\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63191}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63191/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 82149316c90d37ae3f973de25df5a006
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
+	at PsslaiMerchantV3.PageObject.LandingPage.login(LandingPage.java:35)
+	at PsslaiMerchantV3.Tests.LoginTest.loginValidCreds(LoginTest.java:19)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -117,8 +163,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>4</td>
-<td>PsslaiMerchantV3.Tests.DepositTest@421bba99</td></tr>
+<td>0</td>
+<td>PsslaiMerchantV3.Tests.LoginTest@7803bfd</td></tr>
 <tr>
 <td title='PsslaiMerchantV3.Tests.DepositTest.verifyManualDepositTransaction()'><b>verifyManualDepositTransaction</b><br>Test class: PsslaiMerchantV3.Tests.DepositTest<br>Test method: Verify details of manual deposit transaction<br>Parameters: {userPassword=Traxion123!, amount=1000.00, onlinebankTypeNum=2, paymentMethod=36823, userName=psslai-sit@mailinator.com, usernameBogus=a, userPassBogus=a, manualbankType=BDO_UNIBANK}</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: .dtr-control&apos; (tried for 10 second(s) with 500 milliseconds interval)
@@ -129,14 +175,14 @@ function toggleAllBoxes() {
 	at PsslaiMerchantV3.Tests.DepositTest.verifyManualDepositTransaction(DepositTest.java:38)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.dtr-control&quot;}
-  (Session info: chrome=139.0.7258.154)
+  (Session info: chrome=140.0.7339.128)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [90321955c99ebd5df43a7f4c106be793, findElement {value=.dtr-control, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.154, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\jmendoza\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56173}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56173/devtoo..., se:cdpVersion: 139.0.7258.154, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 90321955c99ebd5df43a7f4c106be793
+Command: [1eee45be19509358c7a88a35e71ade1a, findElement {value=.dtr-control, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\jmendoza\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57825}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57825/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1eee45be19509358c7a88a35e71ade1a
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -156,8 +202,8 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
 	... 31 more
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace299395997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace299395997'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: .dtr-control&apos; (tried for 10 second(s) with 500 milliseconds interval)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace113202956", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace113202956'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.cssSelector: .dtr-control&apos; (tried for 10 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at PsslaiMerchantV3.AbstractComponents.AbstractComponents.waitForElementToAppear(AbstractComponents.java:40)
@@ -192,15 +238,15 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.dtr-control&quot;}
-  (Session info: chrome=139.0.7258.154)
+  (Session info: chrome=140.0.7339.128)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.11&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [90321955c99ebd5df43a7f4c106be793, findElement {value=.dtr-control, using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.154, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\jmendoza\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56173}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56173/devtoo..., se:cdpVersion: 139.0.7258.154, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 90321955c99ebd5df43a7f4c106be793
-	at jdk.internal.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
+Command: [1eee45be19509358c7a88a35e71ade1a, findElement {value=.dtr-control, using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\jmendoza\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57825}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57825/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1eee45be19509358c7a88a35e71ade1a
+	at jdk.internal.reflect.GeneratedConstructorAccessor21.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
@@ -224,8 +270,96 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
 	... 31 more
 </pre></div></td>
-<td>15</td>
-<td>PsslaiMerchantV3.Tests.DepositTest@421bba99</td></tr>
+<td>14</td>
+<td>PsslaiMerchantV3.Tests.DepositTest@31bcf236</td></tr>
+<tr>
+<td title='PsslaiMerchantV3.Tests.MemberTest.searchMember()'><b>searchMember</b><br>Test class: PsslaiMerchantV3.Tests.MemberTest<br>Test method: Search Member from Member List<br>Parameters: {firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. The file is currently being processed and will be sent to your email shortly., userName=jmendoza+0002@traxiontech.net}</td>
+<td><div><pre>java.lang.AssertionError: Name does not match expected [James Jomel] but found [Kevin Edward Gile Pasimio]
+	at PsslaiMerchantV3.Tests.MemberTest.searchMember(MemberTest.java:48)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1870812438", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1870812438'><pre>java.lang.AssertionError: Name does not match expected [James Jomel] but found [Kevin Edward Gile Pasimio]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at PsslaiMerchantV3.Tests.MemberTest.searchMember(MemberTest.java:48)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>2</td>
+<td>PsslaiMerchantV3.Tests.MemberTest@134d26af</td></tr>
+<tr>
+<td title='PsslaiMerchantV3.Tests.DepositTest.verifyOnlineDepositTransaction()'><b>verifyOnlineDepositTransaction</b><br>Test class: PsslaiMerchantV3.Tests.DepositTest<br>Test method: Verify details of online deposit transaction<br>Parameters: {userPassword=Traxion123!, amount=1000.00, onlinebankTypeNum=2, paymentMethod=36823, userName=psslai-sit@mailinator.com, usernameBogus=a, userPassBogus=a, manualbankType=BDO_UNIBANK}</td>
+<td><div><pre>java.lang.AssertionError: Reference Number should be displayed expected [10E5CFA312C8] but found [PLHB4Q3OZJF3]
+	at PsslaiMerchantV3.Tests.DepositTest.verifyOnlineDepositTransaction(DepositTest.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1090749131", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1090749131'><pre>java.lang.AssertionError: Reference Number should be displayed expected [10E5CFA312C8] but found [PLHB4Q3OZJF3]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at PsslaiMerchantV3.Tests.DepositTest.verifyOnlineDepositTransaction(DepositTest.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>4</td>
+<td>PsslaiMerchantV3.Tests.DepositTest@31bcf236</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -236,55 +370,70 @@ Session ID: 90321955c99ebd5df43a7f4c106be793
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='PsslaiMerchantV3.Tests.LoginTest.loginValidCreds()'><b>loginValidCreds</b><br>Test class: PsslaiMerchantV3.Tests.LoginTest<br>Test method: Login with valid credentials<br>Parameters: {userName=jmendoza+0002@traxiontech.net, userPassword=Traxion123!!}</td>
+<td title='PsslaiMerchantV3.Tests.DepositTest.onlineDeposit()'><b>onlineDeposit</b><br>Test class: PsslaiMerchantV3.Tests.DepositTest<br>Test method: Perform online deposit transaction<br>Parameters: {userPassword=Traxion123!, amount=1000.00, onlinebankTypeNum=2, paymentMethod=36823, userName=psslai-sit@mailinator.com, usernameBogus=a, userPassBogus=a, manualbankType=BDO_UNIBANK}</td>
 <td></td>
-<td>12</td>
-<td>PsslaiMerchantV3.Tests.LoginTest@2ea6e30c</td></tr>
+<td>11</td>
+<td>PsslaiMerchantV3.Tests.DepositTest@31bcf236</td></tr>
+<tr>
+<td title='PsslaiMerchantV3.Tests.MemberTest.viewMemberDetails()'><b>viewMemberDetails</b><br>Test class: PsslaiMerchantV3.Tests.MemberTest<br>Test method: View member details<br>Parameters: {firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. The file is currently being processed and will be sent to your email shortly., userName=jmendoza+0002@traxiontech.net}</td>
+<td></td>
+<td>3</td>
+<td>PsslaiMerchantV3.Tests.MemberTest@134d26af</td></tr>
+<tr>
+<td title='PsslaiMerchantV3.Tests.WithdrawalTest.withdrawalPesonet()'><b>withdrawalPesonet</b><br>Test class: PsslaiMerchantV3.Tests.WithdrawalTest<br>Test method: Perform withdrawal via Pesonet<br>Parameters: {userPassword=Traxion123!, amount=1000.00, bankTypeNum=26, accountName=QA Test BDO, bankTypeNumNL=2061, paymentMethod=36823, userName=psslai-sit@mailinator.com, usernameBogus=a, accountNumber=003920087172, userPassBogus=a, manualbankType=BDO_UNIBANK}</td>
+<td></td>
+<td>3</td>
+<td>PsslaiMerchantV3.Tests.WithdrawalTest@4b3ed2f0</td></tr>
+<tr>
+<td title='PsslaiMerchantV3.Tests.LoginTest.loginwithInvalidCreds()'><b>loginwithInvalidCreds</b><br>Test class: PsslaiMerchantV3.Tests.LoginTest<br>Test method: Login with invalid credencials<br>Parameters: {userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test, userName=jmendoza+0002@traxiontech.net, emptyusername=}</td>
+<td></td>
+<td>0</td>
+<td>PsslaiMerchantV3.Tests.LoginTest@7803bfd</td></tr>
+<tr>
+<td title='PsslaiMerchantV3.Tests.WithdrawalTest.withdrawalPesonetLinkedAccounts()'><b>withdrawalPesonetLinkedAccounts</b><br>Test class: PsslaiMerchantV3.Tests.WithdrawalTest<br>Test method: Withdraw via pesonet (linked accounts)<br>Parameters: {userPassword=Traxion123!, amount=1000.00, bankTypeNum=26, accountName=QA Test BDO, bankTypeNumNL=2061, paymentMethod=36823, userName=psslai-sit@mailinator.com, usernameBogus=a, accountNumber=003920087172, userPassBogus=a, manualbankType=BDO_UNIBANK}</td>
+<td></td>
+<td>3</td>
+<td>PsslaiMerchantV3.Tests.WithdrawalTest@4b3ed2f0</td></tr>
+<tr>
+<td title='PsslaiMerchantV3.Tests.LoginTest.loginwithoutcredencials()'><b>loginwithoutcredencials</b><br>Test class: PsslaiMerchantV3.Tests.LoginTest<br>Test method: Login without credencials<br>Parameters: {userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test, userName=jmendoza+0002@traxiontech.net, emptyusername=}</td>
+<td></td>
+<td>0</td>
+<td>PsslaiMerchantV3.Tests.LoginTest@7803bfd</td></tr>
+<tr>
+<td title='PsslaiMerchantV3.Tests.LoginTest.loginwithInvalidPassword()'><b>loginwithInvalidPassword</b><br>Test class: PsslaiMerchantV3.Tests.LoginTest<br>Test method: Login with incorrect password<br>Parameters: {userPassword=Traxion123!!, emptypassword=, invalidUserName=test@mail.net, invalidPassword=pass1test, userName=jmendoza+0002@traxiontech.net, emptyusername=}</td>
+<td></td>
+<td>0</td>
+<td>PsslaiMerchantV3.Tests.LoginTest@7803bfd</td></tr>
 <tr>
 <td title='PsslaiMerchantV3.Tests.WithdrawalTest.withdrawalInstapay()'><b>withdrawalInstapay</b><br>Test class: PsslaiMerchantV3.Tests.WithdrawalTest<br>Test method: Perform withdrawal via Instapay<br>Parameters: {userPassword=Traxion123!, amount=1000.00, bankTypeNum=26, accountName=QA Test BDO, bankTypeNumNL=2061, paymentMethod=36823, userName=psslai-sit@mailinator.com, usernameBogus=a, accountNumber=003920087172, userPassBogus=a, manualbankType=BDO_UNIBANK}</td>
 <td></td>
 <td>3</td>
-<td>PsslaiMerchantV3.Tests.WithdrawalTest@5d12a356</td></tr>
+<td>PsslaiMerchantV3.Tests.WithdrawalTest@4b3ed2f0</td></tr>
 <tr>
 <td title='PsslaiMerchantV3.Tests.DepositTest.manualDeposit()'><b>manualDeposit</b><br>Test class: PsslaiMerchantV3.Tests.DepositTest<br>Test method: Perform manual deposit transaction<br>Parameters: {userPassword=Traxion123!, amount=1000.00, onlinebankTypeNum=2, paymentMethod=36823, userName=psslai-sit@mailinator.com, usernameBogus=a, userPassBogus=a, manualbankType=BDO_UNIBANK}</td>
 <td></td>
-<td>4</td>
-<td>PsslaiMerchantV3.Tests.DepositTest@421bba99</td></tr>
-<tr>
-<td title='PsslaiMerchantV3.Tests.WithdrawalTest.withdrawalPesonet()'><b>withdrawalPesonet</b><br>Test class: PsslaiMerchantV3.Tests.WithdrawalTest<br>Test method: Perform withdrawal via Pesonet<br>Parameters: {userPassword=Traxion123!, amount=1000.00, bankTypeNum=26, accountName=QA Test BDO, bankTypeNumNL=2061, paymentMethod=36823, userName=psslai-sit@mailinator.com, usernameBogus=a, accountNumber=003920087172, userPassBogus=a, manualbankType=BDO_UNIBANK}</td>
-<td></td>
-<td>4</td>
-<td>PsslaiMerchantV3.Tests.WithdrawalTest@5d12a356</td></tr>
+<td>6</td>
+<td>PsslaiMerchantV3.Tests.DepositTest@31bcf236</td></tr>
 <tr>
 <td title='PsslaiMerchantV3.Tests.DisbursementTest.bulkDisbursementTransaction()'><b>bulkDisbursementTransaction</b><br>Test class: PsslaiMerchantV3.Tests.DisbursementTest<br>Test method: Perform Bulkdisbursement Transaction<br>Parameters: {userPassword=Traxion123!, userName=psslai-sit@mailinator.com, bulkDisbursementFeeDscrptn=For Interbank Transfers (InstaPay), a PHP 25.00 processing fee will be computed and deducted from the parent wallet based on the amounts set per item inside the file. Wallet Transfers (TraxionPay) processing fee is PHP 15.00.}</td>
 <td></td>
 <td>3</td>
-<td>PsslaiMerchantV3.Tests.DisbursementTest@134d26af</td></tr>
-<tr>
-<td title='PsslaiMerchantV3.Tests.WithdrawalTest.withdrawalPesonetLinkedAccounts()'><b>withdrawalPesonetLinkedAccounts</b><br>Test class: PsslaiMerchantV3.Tests.WithdrawalTest<br>Test method: Withdraw via pesonet (linked accounts)<br>Parameters: {userPassword=Traxion123!, amount=1000.00, bankTypeNum=26, accountName=QA Test BDO, bankTypeNumNL=2061, paymentMethod=36823, userName=psslai-sit@mailinator.com, usernameBogus=a, accountNumber=003920087172, userPassBogus=a, manualbankType=BDO_UNIBANK}</td>
-<td></td>
-<td>4</td>
-<td>PsslaiMerchantV3.Tests.WithdrawalTest@5d12a356</td></tr>
-<tr>
-<td title='PsslaiMerchantV3.Tests.DepositTest.onlineDeposit()'><b>onlineDeposit</b><br>Test class: PsslaiMerchantV3.Tests.DepositTest<br>Test method: Perform online deposit transaction<br>Parameters: {userPassword=Traxion123!, amount=1000.00, onlinebankTypeNum=2, paymentMethod=36823, userName=psslai-sit@mailinator.com, usernameBogus=a, userPassBogus=a, manualbankType=BDO_UNIBANK}</td>
-<td></td>
-<td>10</td>
-<td>PsslaiMerchantV3.Tests.DepositTest@421bba99</td></tr>
+<td>PsslaiMerchantV3.Tests.DisbursementTest@4fad9bb2</td></tr>
 <tr>
 <td title='PsslaiMerchantV3.Tests.WithdrawalTest.withdrawalInstapayLinkedAccounts()'><b>withdrawalInstapayLinkedAccounts</b><br>Test class: PsslaiMerchantV3.Tests.WithdrawalTest<br>Test method: Withdraw via Instapay (linked accounts)<br>Parameters: {userPassword=Traxion123!, amount=1000.00, bankTypeNum=26, accountName=QA Test BDO, bankTypeNumNL=2061, paymentMethod=36823, userName=psslai-sit@mailinator.com, usernameBogus=a, accountNumber=003920087172, userPassBogus=a, manualbankType=BDO_UNIBANK}</td>
 <td></td>
 <td>3</td>
-<td>PsslaiMerchantV3.Tests.WithdrawalTest@5d12a356</td></tr>
+<td>PsslaiMerchantV3.Tests.WithdrawalTest@4b3ed2f0</td></tr>
 <tr>
-<td title='PsslaiMerchantV3.Tests.MemberTest.downloadMemberList()'><b>downloadMemberList</b><br>Test class: PsslaiMerchantV3.Tests.MemberTest<br>Test method: Download member list successfully<br>Parameters: {userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. The file is currently being processed and will be sent to your email shortly., userName=jmendoza+0002@traxiontech.net}</td>
+<td title='PsslaiMerchantV3.Tests.MemberTest.viewMemberList()'><b>viewMemberList</b><br>Test class: PsslaiMerchantV3.Tests.MemberTest<br>Test method: View member list in UI<br>Parameters: {firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. The file is currently being processed and will be sent to your email shortly., userName=jmendoza+0002@traxiontech.net}</td>
 <td></td>
-<td>3</td>
-<td>PsslaiMerchantV3.Tests.MemberTest@6dee4f1b</td></tr>
+<td>2</td>
+<td>PsslaiMerchantV3.Tests.MemberTest@134d26af</td></tr>
 <tr>
-<td title='PsslaiMerchantV3.Tests.MemberTest.viewMemberList()'><b>viewMemberList</b><br>Test class: PsslaiMerchantV3.Tests.MemberTest<br>Test method: View member list in UI<br>Parameters: {userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. The file is currently being processed and will be sent to your email shortly., userName=jmendoza+0002@traxiontech.net}</td>
+<td title='PsslaiMerchantV3.Tests.MemberTest.downloadMemberList()'><b>downloadMemberList</b><br>Test class: PsslaiMerchantV3.Tests.MemberTest<br>Test method: Download member list successfully<br>Parameters: {firstName=Kevin, fullName=Kevin Edward Gile Pasimio, userPassword=Traxion123!!, successMsg=Your request to generate the member list has been received. The file is currently being processed and will be sent to your email shortly., userName=jmendoza+0002@traxiontech.net}</td>
 <td></td>
 <td>5</td>
-<td>PsslaiMerchantV3.Tests.MemberTest@6dee4f1b</td></tr>
+<td>PsslaiMerchantV3.Tests.MemberTest@134d26af</td></tr>
 </table><p>
 </body>
 </html>

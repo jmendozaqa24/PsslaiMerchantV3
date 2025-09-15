@@ -45,15 +45,13 @@ public class DepositTest extends BaseTest {
 		DashBoardPage dashboardPage = landingPage.login(input.get("userName"), input.get("userPassword"));
 		logInfo("Navigate to CashIn-Deposit");
 		CashInDepositPage deposit = dashboardPage.goToCashInMenu_Deposit();
-		String ref = deposit.performOnlineDeposit(
-				input.get("amount"), 
-				input.get("onlinebankTypeNum"), 
-				input.get("paymentMethod"), 
-				
-				//Login to Bogus Bank
-				input.get("usernameBogus"), 
-				input.get("userPassBogus"));
-		Assert.assertEquals(deposit.getSuccessMessage(), "Payment Successful!", "Payment Successful! should be displayed");
+		logInfo("Perform Online Deposit Transaction");
+		String ref = deposit.performOnlineDeposit(input.get("amount"), input.get("onlinebankTypeNum"),
+				input.get("paymentMethod"),
+				// Login to Bogus Bank
+				input.get("usernameBogus"), input.get("userPassBogus"));
+		Assert.assertEquals(deposit.getSuccessMessage(), "Payment Successful!",
+				"Payment Successful! should be displayed");
 		logPass("Online deposit completed successfully! Reference Number: " + ref);
 	}
 

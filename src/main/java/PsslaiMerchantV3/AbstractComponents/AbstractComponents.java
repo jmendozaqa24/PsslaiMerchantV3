@@ -101,9 +101,18 @@ public class AbstractComponents {
 	}
 	
 	public void dropDownSelection(WebElement dropDownElement, String bankAccount) {
+		waitForElementToAppear(dropDownElement);
 		Select dropDown = new Select(dropDownElement);
 		dropDown.selectByValue(bankAccount);
 	}
+	
+	public void refreshPage() {
+		driver.navigate().refresh();
+		
+	}
+	
+	
+	
 	
 
 	

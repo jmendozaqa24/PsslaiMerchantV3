@@ -192,7 +192,7 @@ public class CashInDepositPage extends AbstractComponents {
 	
 	public String onlineBogusTxnRefNum() throws InterruptedException {
 		waitForElementToAppear(transactRefNum);
-		Thread.sleep(4000);
+		Thread.sleep(5000);
 		String getRefNum = transactRefNum.getText();
 		System.out.println("Toast Raw Text: " + getRefNum);
 
