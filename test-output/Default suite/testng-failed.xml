@@ -5,9 +5,9 @@
     <classes>
       <class name="PsslaiMerchantV3.Tests.MemberTest">
         <methods>
+          <include name="advanceSearchMemberFullName" invocation-numbers="0"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="viewMemberDetails" invocation-numbers="0"/>
         </methods>
       </class> <!-- PsslaiMerchantV3.Tests.MemberTest -->
     </classes>

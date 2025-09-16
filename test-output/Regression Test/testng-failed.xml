@@ -6,13 +6,6 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="PsslaiMerchantV3.Tests.LoginTest">
-        <methods>
-          <include name="launchApplication"/>
-          <include name="tearDown"/>
-          <include name="loginValidCreds" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- PsslaiMerchantV3.Tests.LoginTest -->
       <class name="PsslaiMerchantV3.Tests.DepositTest">
         <methods>
           <include name="verifyManualDepositTransaction" invocation-numbers="0"/>
@@ -25,9 +18,9 @@
       </class> <!-- PsslaiMerchantV3.Tests.DepositTest -->
       <class name="PsslaiMerchantV3.Tests.MemberTest">
         <methods>
+          <include name="advanceSearchMemberFullName" invocation-numbers="0"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
-          <include name="searchMember" invocation-numbers="0"/>
         </methods>
       </class> <!-- PsslaiMerchantV3.Tests.MemberTest -->
     </classes>

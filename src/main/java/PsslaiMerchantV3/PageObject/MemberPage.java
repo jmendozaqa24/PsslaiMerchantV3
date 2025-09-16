@@ -25,6 +25,13 @@ public class MemberPage extends AbstractComponents{
 	@FindBy(css=".btn-view-details") WebElement viewDetailsBtn;
 	@FindBy(css=".dtr-data") WebElement viewDetailsInsideBtn;
 	@FindBy(xpath="//h2") WebElement pageTitle;
+	@FindBy(id="advance-search") WebElement advancedSearchBtn;
+	@FindBy(id="advanceSearchPanel") WebElement advancedSearchPanel;
+	@FindBy(name="fullName") WebElement fullNameInpt;
+	@FindBy(name="status") WebElement statusDp;
+	@FindBy(name="walletAccount") WebElement walletAccountInpt;
+	@FindBy(id="applySearchBtn") WebElement applySearchBtn;
+	@FindBy(css=".toast-body") WebElement successToastMsg;
 	
 	
 	public void outsideSearch(String firstName) {
@@ -48,18 +55,24 @@ public class MemberPage extends AbstractComponents{
 		return getSuccessMessageText(successToastMessage);
 	}
 	
+	public String getAdvancedSearchSuccessMsg() {
+		waitForElementToAppear(successToastMsg);
+		return successToastMsg.getText();
+	}
+	
 	public void searchMember(String fName) {
 		waitForElementToAppear(searchBar);
 		searchBar.sendKeys(fName);
 	}
 	
-	public String getSearchResultMember(String fName) {
+	public String getSearchResultMember(String fName) throws InterruptedException {
 		searchMember(fName);
+		Thread.sleep(2000);
 		waitForElementToAppear(getResultTopOne);
 		return getResultTopOne.getText();
 	}
 	
-	public String clickUser(String fName) {
+	public String clickUser(String fName) throws InterruptedException {
 		getSearchResultMember(fName);
 		getResultTopOne.click();
 		waitForElementToAppear(viewDetailsBtn);
@@ -68,7 +81,29 @@ public class MemberPage extends AbstractComponents{
 		return pageTitle.getText();
 	}
 	
+	public String getAdvancedSearchMemberFullName(String name) {
+		waitForElementToAppear(advancedSearchBtn);
+		advancedSearchBtn.click();
+		waitForElementToAppear(advancedSearchPanel);
+		memberName(name);
+		applySearchBtn.click();
+		waitForElementToDisappear(advancedSearchPanel);
+		waitForElementToAppear(getResultTopOne);
+		return getResultTopOne.getText();
+	}
 	
+	public void memberName(String name) {
+		waitForElementToAppear(fullNameInpt);
+		fullNameInpt.sendKeys(name);
+	}
+	
+	public void status(String status) {
+		dropDownSelection(statusDp, status);
+	}
+	
+	public void walletAccount(String walletAccountNo) {
+		walletAccountInpt.sendKeys(walletAccountNo);
+	}
 	
 	
 	

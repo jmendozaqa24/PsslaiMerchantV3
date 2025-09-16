@@ -97,7 +97,6 @@ public class BaseTest {
 	    public static void logWarning(String message) {
 	        Listener.extentTest.get().log(Status.WARNING, message);
 	    }
-		
-
-	
+	    
+	   
 }

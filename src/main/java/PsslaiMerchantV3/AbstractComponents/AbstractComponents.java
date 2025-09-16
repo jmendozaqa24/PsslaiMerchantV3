@@ -36,8 +36,13 @@ public class AbstractComponents {
 	@FindBy(id="settings-link-side-bar") WebElement settingsMenu;
 	
 	public void waitForElementToAppear(WebElement ele) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOf(ele));
+	}
+	
+	public void waitForElementToDisappear(WebElement ele) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.invisibilityOf(ele));
 	}
 	
 	public void uploadFile(WebDriver driver, WebElement locator, String fileUpload) {
