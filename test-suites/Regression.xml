@@ -11,6 +11,7 @@
       <class name="PsslaiMerchantV3.Tests.DepositTest"/>
       <class name="PsslaiMerchantV3.Tests.WithdrawalTest"/>
       <class name="PsslaiMerchantV3.Tests.DisbursementTest"/>
+      <class name="PsslaiMerchantV3.Tests.SettingTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

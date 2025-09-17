@@ -116,6 +116,11 @@ public class AbstractComponents {
 		
 	}
 	
+	public void clickBtn(WebElement ele) {
+		waitForElementToAppear(ele);
+		ele.click();
+	}
+	
 	
 	
 	

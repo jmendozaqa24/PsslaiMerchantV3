@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="PsslaiMerchantV3.Tests.MemberTest">
+      <class name="PsslaiMerchantV3.Tests.SettingTest">
         <methods>
-          <include name="advanceSearchMemberFullName" invocation-numbers="0"/>
           <include name="launchApplication"/>
+          <include name="viewMyAccount" invocation-numbers="0"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- PsslaiMerchantV3.Tests.MemberTest -->
+      </class> <!-- PsslaiMerchantV3.Tests.SettingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

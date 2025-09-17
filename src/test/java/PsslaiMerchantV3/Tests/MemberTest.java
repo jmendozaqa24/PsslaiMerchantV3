@@ -73,6 +73,8 @@ public class MemberTest extends BaseTest {
 		Assert.assertEquals(result, input.get("fullName"), "Result doesn't match");
 		logPass("Result match successfully");
 	}
+	
+	//Add test case for Advance Search using wallet account or status
 	 
 	
 	@DataProvider
